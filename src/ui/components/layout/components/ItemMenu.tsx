@@ -8,9 +8,9 @@ interface Props {
 function ItemMenu(props: Props) {
   return (
     <li
-      className={`w-[70%] transition-[0.2s]  cursor-pointer hover:text-green-600 ${
+      className={`w-[70%] transition-[0.2s]  cursor-pointer hover:text-blue-300 ${
         props.active
-          ? "text-green-600 px-[7px] border-r-[5px] border-solid border-green-600 scale-110"
+          ? "text-black px-[7px] border-r-[5px] border-solid border-black scale-110"
           : "text-white"
       }`}
     >

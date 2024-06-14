@@ -13,7 +13,7 @@ function Navbar() {
   console.log(pathName);
 
   return (
-    <nav className="h-full w-[75px] flex flex-col justify-center text-white items-center bg-blue-900">
+    <nav className="h-full w-[75px] flex flex-col justify-center text-white items-center bg-[#1B4391]">
       <div className="h-[95%] w-full flex flex-col justify-between items-center">
         <div>Logo</div>
         <ul className="m-0 p-0 list-none w-full flex flex-col items-center justify-center gap-[20px]">

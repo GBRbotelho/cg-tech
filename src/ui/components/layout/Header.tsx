@@ -1,0 +1,26 @@
+import React from "react";
+import Sino from "../icons/Header/Sino";
+import Profile from "../icons/Header/Profile";
+
+function Header() {
+  return (
+    <header className="bg-[#D0D9E8] w-full h-[47px] flex items-center justify-center z-10">
+      <div className="w-[95%] h-full flex justify-between items-center">
+        <h2 className="m-0 text-[25px] text-[#1B4391]">
+          <strong className="font-[700]"> Colaborador: </strong> Marcos
+        </h2>
+        <div className="h-full flex items-center gap-[20px]">
+          <p className="text-[#1B4391] text-[18px] font-[400]">Olá, Marcos</p>
+          <span className="text-[#1B4391]">
+            <Sino className="w-[25px] h-[25px]" />
+          </span>
+          <button>
+            <Profile className="w-[30px] h-[30px]" />
+          </button>
+        </div>
+      </div>
+    </header>
+  );
+}
+
+export default Header;
