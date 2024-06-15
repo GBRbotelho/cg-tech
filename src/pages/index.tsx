@@ -1,7 +1,12 @@
+import HomeDesktop from "@/ui/pages/Home/HomeDesktop";
 import React from "react";
 
 function index() {
-  return <main className="">Home</main>;
+  return (
+    <>
+      <HomeDesktop />
+    </>
+  );
 }
 
 export default index;
