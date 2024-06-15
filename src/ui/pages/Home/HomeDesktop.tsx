@@ -2,8 +2,8 @@ import React from "react";
 
 function HomeDesktop() {
   return (
-    <main className="h-screen w-screen">
-      <section className="w-full bcground text-center text-white h-[50vw] bg-cover bg-center flex items-center justify-center">
+    <>
+      <section className="w-full bcground text-center text-white h-[48vw] min-h-[500px] bg-cover bg-center items-center justify-center flex">
         <div className="flex items-center flex-col gap-10">
           <div>
             <h1 className="font-[700] leading-[55px] m-0 p-0 text-[55px]">
@@ -18,7 +18,7 @@ function HomeDesktop() {
           </button>
         </div>
       </section>
-    </main>
+    </>
   );
 }
 

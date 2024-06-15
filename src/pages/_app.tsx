@@ -4,6 +4,7 @@ import { AppProps } from "next/app";
 import { useRouter } from "next/router";
 import "@/styles/globals.css";
 import Header from "@/ui/components/layout/Header";
+import NavbarSite from "@/ui/components/layout/NavbarSite";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -12,19 +13,22 @@ function MyApp({ Component, pageProps }: AppProps) {
   const isDashboardRoute = router.pathname.startsWith("/dashboard");
 
   return (
-    <main className="flex w-screen h-screen">
+    <>
       {isDashboardRoute ? (
-        <>
+        <main className="flex w-screen h-screen">
           <Navbar />
           <div className="w-full h-full">
             <Header />
             <Component {...pageProps} />
           </div>
-        </>
+        </main>
       ) : (
-        <Component {...pageProps} />
+        <main className="flex flex-col w-screen h-screen">
+          <NavbarSite />
+          <Component {...pageProps} />
+        </main>
       )}
-    </main>
+    </>
   );
 }
 
