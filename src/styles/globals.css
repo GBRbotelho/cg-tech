@@ -2,9 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+.bcground {
+  background-image: url("../assets/imgs/Home/Section1.webp");
+}
 
-.bcground{
-    background-image: url("../assets/imgs/Home/Section1.webp");
+.boxShadow {
+  box-shadow: 9px 10px 12px 1px rgba(0, 0, 0, 0.3);
+}
+
+.gradientBackground {
+  background: linear-gradient(to left, #0056ff, #003070);
 }
 
 @font-face {

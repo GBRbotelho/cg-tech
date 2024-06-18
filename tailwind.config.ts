@@ -10,8 +10,8 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        'home': "url('/public/img/Section1.webp')",
-      }
+        home: "url('/public/img/Section1.webp')",
+      },
     },
   },
   plugins: [],

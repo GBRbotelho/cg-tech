@@ -4,7 +4,7 @@ import SwiperService from "./components/SwiperService";
 function HomeDesktop() {
   return (
     <>
-      <section className="w-full bcground text-center text-white h-[48vw] min-h-[500px] bg-cover bg-center items-center justify-center flex">
+      <section className="w-full bcground text-center text-white h-[48vw] min-h-[600px] bg-cover bg-center items-center justify-center flex">
         <div className="flex items-center flex-col gap-10">
           <div>
             <h1 className="font-[700] leading-[55px] m-0 p-0 text-[55px]">
@@ -19,8 +19,8 @@ function HomeDesktop() {
           </button>
         </div>
       </section>
-      <section className="max-w-[1400px] w-full flex flex-col items-center justify-center">
-        <h1 className="text-[38px] font-[700] text-center">
+      <section className="max-w-[1400px] w-full flex flex-col items-center justify-center my-20">
+        <h1 className="text-[38px] font-[800] text-center">
           Entregando sempre o melhor para os nossos clientes
         </h1>
         <p className="text-center text-[21px] font-[400]">
@@ -29,7 +29,7 @@ function HomeDesktop() {
           <br />
           solução ao seu alcance
         </p>
-        <div className="w-[90%]">
+        <div className="w-[90%] my-0 flex items-center">
           <SwiperService />
         </div>
       </section>
