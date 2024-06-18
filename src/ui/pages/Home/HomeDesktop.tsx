@@ -1,4 +1,5 @@
 import React from "react";
+import SwiperService from "./components/SwiperService";
 
 function HomeDesktop() {
   return (
@@ -16,6 +17,20 @@ function HomeDesktop() {
           <button className="text-[25px] bg-[#5271ff] w-fit px-5 py-1 rounded-[5px]">
             Solicitar orçamento
           </button>
+        </div>
+      </section>
+      <section className="max-w-[1400px] w-full flex flex-col items-center justify-center">
+        <h1 className="text-[38px] font-[700] text-center">
+          Entregando sempre o melhor para os nossos clientes
+        </h1>
+        <p className="text-center text-[21px] font-[400]">
+          Criamos pacotes de serviços personalizados para que você tenha a
+          melhor
+          <br />
+          solução ao seu alcance
+        </p>
+        <div className="w-[90%]">
+          <SwiperService />
         </div>
       </section>
     </>
