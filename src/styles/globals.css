@@ -14,6 +14,14 @@
   background: linear-gradient(to left, #0056ff, #003070);
 }
 
+.gradientBackground2 {
+  background: linear-gradient(to left, #8CB1F9, #8CA0BC);
+}
+
+.navbarBackground {
+  background: linear-gradient(to bottom, #000000, transparent);
+}
+
 @font-face {
   font-family: "Open Sauce One";
   src: url("/fonts/OpenSauceOne-Black.ttf") format("truetype");

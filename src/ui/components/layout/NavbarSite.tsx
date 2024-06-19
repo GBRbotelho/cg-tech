@@ -2,7 +2,7 @@ import React from "react";
 
 function NavbarSite() {
   return (
-    <nav className="fixed w-full flex justify-center items-center text-white">
+    <nav className="fixed z-50 w-full flex justify-center items-center navbarBackground text-white">
       <div className="flex w-[95%] py-6 justify-between items-center">
         <div className="w-[210px]">Logo</div>
         <ul className="flex gap-6 text-[18px]">
