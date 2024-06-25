@@ -2,6 +2,7 @@ import React from "react";
 import SwiperService from "./components/SwiperService";
 import Testimonial from "./components/Testimonial";
 import Button from "@/ui/components/utils/Button";
+import CardPortal from "./components/CardPortal";
 
 function HomeDesktop() {
   return (
@@ -47,14 +48,31 @@ function HomeDesktop() {
           <Testimonial classNameCard="relative left-10 bottom-3 z-10" />
           <div className="flex flex-col gap-6">
             <Testimonial classNameCard="relative left-2" />
-            <Testimonial opacity={20} classNameCard="relative left-[-15px]" />
+            <Testimonial opacity={"30"} classNameCard="relative left-[-15px]" />
           </div>
         </div>
         <div className="ml-16">
           <Button name="Quero ser cliente" className="px-6" />
         </div>
       </section>
-      <section>Teste</section>
+      <section className="w-full rounded-[6px] my-10 max-w-[1400px] flex flex-col justify-center items-center">
+        <h1 className="font-[700] text-[36px]">Ultimas Novidades do Portal</h1>
+        <p className="text-[24px] text-center">
+          Se mantenha sempre atualizado sobre o mundo da <br /> segurança e
+          facilities
+        </p>
+        <div className="flex w-[95%] mt-14 flex-row justify-center items-center">
+          <div className="w-[50%]">
+            <CardPortal />
+            <CardPortal reverse={true} />
+          </div>
+          <div className="w-[50%]">
+            <CardPortal />
+            <CardPortal reverse={true} />
+          </div>
+        </div>
+      </section>
+      <section>unidades</section>
     </>
   );
 }

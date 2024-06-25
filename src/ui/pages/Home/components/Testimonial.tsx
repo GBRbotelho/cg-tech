@@ -2,7 +2,7 @@ import React from "react";
 
 type TestimonialProps = {
   classNameCard?: string;
-  opacity?: number;
+  opacity?: string;
 };
 
 function Testimonial(props: TestimonialProps) {
@@ -26,7 +26,7 @@ function Testimonial(props: TestimonialProps) {
       </div>
       {props.opacity && (
         <div
-          className={`absolute h-full bg-black opacity-${props.opacity} rounded-lg flex left-0 w-full`}
+          className={`absolute h-full bg-black bg-opacity-15 rounded-lg flex left-0 w-full`}
         ></div>
       )}
     </div>
