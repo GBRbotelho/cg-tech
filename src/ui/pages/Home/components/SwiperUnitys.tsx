@@ -4,19 +4,19 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import Card from "./Card";
+import CardUnity from "./CardUnity";
 
-function SwiperService() {
+function SwiperUnitys() {
   const swiperRef: any = useRef();
   return (
     <>
-      <div className="left-[-10px]">
+      <div className="absolute left-[-2%]">
         <button onClick={() => swiperRef.current?.slidePrev()}>{"<"}</button>
       </div>
       <Swiper
         modules={[Navigation, Pagination]}
-        spaceBetween={10}
-        slidesPerView={3}
+        spaceBetween={50}
+        slidesPerView={4}
         pagination={{ clickable: true }}
         onSlideChange={() => console.log("slide change")}
         onBeforeInit={(swiper: any) => {
@@ -25,23 +25,26 @@ function SwiperService() {
         watchSlidesProgress
       >
         <SwiperSlide>
-          {({ isVisible }) => <Card active={isVisible ? true : false} />}
+          <CardUnity />
         </SwiperSlide>
         <SwiperSlide>
-          {({ isVisible }) => <Card active={isVisible ? true : false} />}
+          <CardUnity />
         </SwiperSlide>
         <SwiperSlide>
-          {({ isVisible }) => <Card active={isVisible ? true : false} />}
+          <CardUnity />
         </SwiperSlide>
         <SwiperSlide>
-          {({ isVisible }) => <Card active={isVisible ? true : false} />}
+          <CardUnity />
+        </SwiperSlide>
+        <SwiperSlide>
+          <CardUnity />
         </SwiperSlide>
       </Swiper>
-      <div className="rigth-0">
+      <div className="absolute left-[102%]">
         <button onClick={() => swiperRef.current?.slideNext()}>{">"}</button>
       </div>
     </>
   );
 }
 
-export default SwiperService;
+export default SwiperUnitys;

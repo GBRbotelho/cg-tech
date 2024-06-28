@@ -13,7 +13,7 @@ function Card(props: CardProps) {
           props.active ? "boxShadow" : ""
         }`}
       >
-        <div className="bg-black h-[160px]"></div>
+        <div className="bg-black h-[200px]"></div>
         <div className="relative w-full bottom-[30px] flex flex-col items-center">
           <div className="flex flex-col items-center w-[85%] gap-5">
             <h2 className="font-[800] text-[27px] w-full">Portaria e vigia</h2>

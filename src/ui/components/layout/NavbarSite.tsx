@@ -12,7 +12,6 @@ function NavbarSite() {
     } else {
       setNavbarBackground(false);
     }
-
     const scrollThreshold = 60;
 
     if (position < scrollThreshold) {

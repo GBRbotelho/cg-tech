@@ -3,6 +3,7 @@ import SwiperService from "./components/SwiperService";
 import Testimonial from "./components/Testimonial";
 import Button from "@/ui/components/utils/Button";
 import CardPortal from "./components/CardPortal";
+import SwiperUnitys from "./components/SwiperUnitys";
 
 function HomeDesktop() {
   return (
@@ -22,6 +23,30 @@ function HomeDesktop() {
           </button>
         </div>
       </section>
+      <section className="max-w-[1400px] justify-between min-h-[650px] w-[90%] flex items-center gap-[10%] my-10">
+        <div className="w-[40%] h-full flex flex-col justify-between">
+          <div>
+            <h1 className="text-[38px] font-[800]">Sobre a CGTECH</h1>
+            <p className="text-[21px]">Uma família que cuida da sua família!</p>
+          </div>
+          <p className="text-[21px]">
+            Só quem tem mais de 20 anos de experiência no segmento e as melhores
+            tecnologias pode garantir a sua segurança e de sua família.
+          </p>
+          <div className="bg-black h-[380px]"></div>
+        </div>
+        <div className="w-[40%] h-full flex flex-col justify-start gap-12">
+          <div className="bg-black h-[300px]"></div>
+          <div className="flex flex-col gap-8">
+            <p className="text-[21px]">Uma família que cuida da sua família!</p>
+            <p className="text-[21px]">
+              Só quem tem mais de 20 anos de experiência no segmento e as
+              melhores tecnologias pode garantir a sua segurança e de sua
+              família.
+            </p>
+          </div>
+        </div>
+      </section>
       <section className="max-w-[1400px] w-full flex flex-col items-center justify-center my-10">
         <h1 className="text-[38px] font-[800] text-center">
           Entregando sempre o melhor para os nossos clientes
@@ -36,6 +61,7 @@ function HomeDesktop() {
           <SwiperService />
         </div>
       </section>
+
       <section className="w-[95vw] rounded-[6px] py-10 my-10 max-w-[1400px] flex flex-col gradientBackground2 justify-center">
         <div className="ml-16">
           <h1 className="text-white font-[700] text-[33px]">Nossos clientes</h1>
@@ -72,7 +98,12 @@ function HomeDesktop() {
           </div>
         </div>
       </section>
-      <section>unidades</section>
+      <section className="relative max-w-[1400px] w-full flex flex-col items-center justify-center my-10">
+        <h1 className="font-[700] w-[90%] text-[36px]">Nossas unidades</h1>
+        <div className="relative w-[90%] my-0 flex items-center">
+          <SwiperUnitys />
+        </div>
+      </section>
     </>
   );
 }
