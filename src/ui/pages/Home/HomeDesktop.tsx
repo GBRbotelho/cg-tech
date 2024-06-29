@@ -7,8 +7,8 @@ import SwiperUnitys from "./components/SwiperUnitys";
 
 function HomeDesktop() {
   return (
-    <>
-      <section className="w-full bcground text-center text-white h-[48vw] min-h-[600px] bg-cover bg-center items-center justify-center flex">
+    <main className="bg-[#f5f5f5] hidden flex-col items-center w-screen lg:flex">
+      <section className="w-full bcground text-center text-white h-[48vw] min-h-[800px] max-h-[700px] bg-cover bg-center items-center justify-center flex">
         <div className="flex items-center flex-col gap-10">
           <div>
             <h1 className="font-[700] leading-[55px] m-0 p-0 text-[55px]">
@@ -23,8 +23,8 @@ function HomeDesktop() {
           </button>
         </div>
       </section>
-      <section className="max-w-[1400px] justify-between min-h-[650px] w-[90%] flex items-center gap-[10%] my-10">
-        <div className="w-[40%] h-full flex flex-col justify-between">
+      <section className="max-w-[1400px] justify-center min-h-[700px] w-[90%] flex items-center gap-[5%] my-10">
+        <div className="w-[40%] h-full min-h-[600px] flex flex-col justify-between">
           <div>
             <h1 className="text-[38px] font-[800]">Sobre a CGTECH</h1>
             <p className="text-[21px]">Uma família que cuida da sua família!</p>
@@ -58,7 +58,7 @@ function HomeDesktop() {
           solução ao seu alcance
         </p>
         <div className="w-[95%] my-0 flex items-center">
-          <SwiperService />
+          <SwiperService slides={3} />
         </div>
       </section>
 
@@ -101,10 +101,10 @@ function HomeDesktop() {
       <section className="relative max-w-[1400px] w-full flex flex-col items-center justify-center my-10">
         <h1 className="font-[700] w-[90%] text-[36px]">Nossas unidades</h1>
         <div className="relative w-[90%] my-0 flex items-center">
-          <SwiperUnitys />
+          <SwiperUnitys slides={4} />
         </div>
       </section>
-    </>
+    </main>
   );
 }
 

@@ -12,8 +12,8 @@ function Testimonial(props: TestimonialProps) {
         props.classNameCard || ""
       }`}
     >
-      <div className="w-[55px] relative bottom-7 min-w-[55px] min-h[55px] h-[55px] bg-slate-100 rounded-full"></div>
-      <div className="w-[260px] flex flex-col gap-3">
+      <div className="w-[55px] relative bottom-7 min-w-[55px] min-h[55px] h-[70px] bg-slate-100 rounded-full"></div>
+      <div className="w-full max-w-[260px] flex flex-col gap-3">
         <div>
           <h1 className="font-[700]">Elisabeth Trevizan Pastore</h1>
           <i></i>

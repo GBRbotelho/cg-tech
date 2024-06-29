@@ -23,10 +23,10 @@ function MyApp({ Component, pageProps }: AppProps) {
           </div>
         </main>
       ) : (
-        <main className="flex flex-col bg-[#f5f5f5] items-center w-screen h-screen">
+        <>
           <NavbarSite />
           <Component {...pageProps} />
-        </main>
+        </>
       )}
     </>
   );

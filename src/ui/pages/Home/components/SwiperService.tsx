@@ -6,7 +6,11 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Card from "./Card";
 
-function SwiperService() {
+type Props = {
+  slides: number;
+};
+
+function SwiperService(props: Props) {
   const swiperRef: any = useRef();
   return (
     <>
@@ -16,7 +20,7 @@ function SwiperService() {
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={10}
-        slidesPerView={3}
+        slidesPerView={props.slides}
         pagination={{ clickable: true }}
         onSlideChange={() => console.log("slide change")}
         onBeforeInit={(swiper: any) => {

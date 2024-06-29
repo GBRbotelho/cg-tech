@@ -6,17 +6,21 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import CardUnity from "./CardUnity";
 
-function SwiperUnitys() {
+type Props = {
+  slides: number;
+};
+
+function SwiperUnitys(props: Props) {
   const swiperRef: any = useRef();
   return (
     <>
-      <div className="absolute left-[-2%]">
+      <div className="absolute left-[-15px]">
         <button onClick={() => swiperRef.current?.slidePrev()}>{"<"}</button>
       </div>
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={50}
-        slidesPerView={4}
+        slidesPerView={props.slides}
         pagination={{ clickable: true }}
         onSlideChange={() => console.log("slide change")}
         onBeforeInit={(swiper: any) => {
