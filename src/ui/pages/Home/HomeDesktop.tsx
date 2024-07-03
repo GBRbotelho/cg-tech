@@ -28,7 +28,10 @@ function HomeDesktop() {
         </div>
       </section>
       <section className="max-w-[1400px] justify-center min-h-[700px] w-[90%] flex items-center gap-[5%] my-10">
-        <div className="w-[40%] h-full min-h-[600px] flex flex-col justify-between">
+        <div
+          className="w-[40%] h-full min-h-[600px] flex flex-col justify-between"
+          data-aos="zoom-in-up"
+        >
           <div>
             <h1 className="text-[38px] font-[800]">Sobre a CGTECH</h1>
             <p className="text-[21px]">Uma família que cuida da sua família!</p>
@@ -45,7 +48,10 @@ function HomeDesktop() {
             />
           </div>
         </div>
-        <div className="w-[40%] h-full flex flex-col justify-start gap-12">
+        <div
+          className="w-[40%] h-full flex flex-col justify-start gap-12"
+          data-aos="zoom-in-up"
+        >
           <div className="">
             <Image
               src={video}
@@ -63,7 +69,10 @@ function HomeDesktop() {
           </div>
         </div>
       </section>
-      <section className="max-w-[1400px] w-full flex flex-col items-center justify-center my-10">
+      <section
+        className="max-w-[1400px] w-full flex flex-col items-center justify-center my-10"
+        data-aos="zoom-in-up"
+      >
         <h1 className="text-[38px] font-[800] text-center">
           Entregando sempre o melhor para os nossos clientes
         </h1>
@@ -73,12 +82,15 @@ function HomeDesktop() {
           <br />
           solução ao seu alcance
         </p>
-        <div className="w-[95%] my-0 flex items-center">
+        <div className="w-[95%] my-0 flex items-center" data-aos="zoom-in-up">
           <SwiperService slides={3} />
         </div>
       </section>
 
-      <section className="w-[95vw] rounded-[6px] py-10 my-10 max-w-[1400px] flex flex-col gradientBackground2 justify-center">
+      <section
+        className="w-[95vw] rounded-[6px] py-10 my-10 max-w-[1400px] flex flex-col gradientBackground2 justify-center"
+        data-aos="zoom-in-up"
+      >
         <div className="ml-16">
           <h1 className="text-white font-[700] text-[33px]">Nossos clientes</h1>
           <p className="text-white text-[26px] w-[680px]">

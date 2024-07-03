@@ -48,7 +48,10 @@ function HomeMobile() {
         </div>
       </section>
       <section className="max-w-[1400px] justify-center w-[90%] flex flex-col items-center gap-2 my-0">
-        <div className="w-full max-w-[600px] h-full min-h-[600px] flex flex-col gap-2 justify-center">
+        <div
+          className="w-full max-w-[600px] h-full min-h-[600px] flex flex-col gap-2 justify-center"
+          data-aos="zoom-in-up"
+        >
           <div>
             <h1 className="text-[34px] font-[800]">Sobre a CGTECH</h1>
             <p className="text-[18px]">Uma família que cuida da sua família!</p>
@@ -61,7 +64,10 @@ function HomeMobile() {
             <Image src={sobre} alt="Video" />
           </div>
         </div>
-        <div className="w-full max-w-[600px] h-full flex flex-col justify-start gap-12">
+        <div
+          className="w-full max-w-[600px] h-full flex flex-col justify-start gap-12"
+          data-aos="zoom-in-up"
+        >
           <div className=" max-w-[600px]">
             <Image src={video} alt="Video" />
           </div>
@@ -76,10 +82,13 @@ function HomeMobile() {
         </div>
       </section>
       <section className="max-w-[1400px] w-[95%] flex flex-col items-center justify-center my-10">
-        <h1 className="text-[30px] font-[800] text-center">
+        <h1
+          className="text-[30px] font-[800] text-center"
+          data-aos="zoom-in-up"
+        >
           Entregando sempre o melhor para os nossos clientes
         </h1>
-        <p className="text-center text-[18px] font-[400]">
+        <p className="text-center text-[18px] font-[400]" data-aos="zoom-in-up">
           Criamos pacotes de serviços personalizados para que você tenha a
           melhor solução ao seu alcance
         </p>
@@ -87,12 +96,16 @@ function HomeMobile() {
           className={`w-[95%] ${
             windowWidth <= 700 && "max-w-[400px]"
           } my-0 flex items-center`}
+          data-aos="zoom-in-up"
         >
           <SwiperService slides={(windowWidth > 700 && 2) || 1} />
         </div>
       </section>
 
-      <section className="w-[95vw] rounded-[6px] items-center gap-5 py-10 my-10 max-w-[1400px] flex flex-col gradientBackground2 justify-center">
+      <section
+        className="w-[95vw] rounded-[6px] items-center gap-5 py-10 my-10 max-w-[1400px] flex flex-col gradientBackground2 justify-center"
+        data-aos="zoom-in-up"
+      >
         <div className="ml-16">
           <h1 className="text-white font-[700] text-[30px]">Nossos clientes</h1>
           <p className="text-white text-[18px] w-[90%]">

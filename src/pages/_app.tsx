@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "@/ui/components/layout/Navbar";
 import { AppProps } from "next/app";
 import { useRouter } from "next/router";
 import "@/styles/globals.css";
 import Header from "@/ui/components/layout/Header";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import NavbarSite from "@/ui/components/layout/NavbarSite";
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -11,6 +13,12 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   // Verificar se a rota é uma rota do dashboard
   const isDashboardRoute = router.pathname.startsWith("/dashboard");
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
 
   return (
     <>
