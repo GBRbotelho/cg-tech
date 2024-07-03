@@ -4,12 +4,15 @@ import Testimonial from "./components/Testimonial";
 import Button from "@/ui/components/utils/Button";
 import CardPortal from "./components/CardPortal";
 import SwiperUnitys from "./components/SwiperUnitys";
+import video from "@/public/imgs/Home/video.webp";
+import sobre from "@/public/imgs/Home/sobre.webp";
+import Image from "next/image";
 
 function HomeDesktop() {
   return (
     <main className="bg-[#f5f5f5] hidden flex-col items-center w-screen lg:flex">
       <section className="w-full bcground text-center text-white h-[48vw] min-h-[800px] max-h-[700px] bg-cover bg-center items-center justify-center flex">
-        <div className="flex items-center flex-col gap-10">
+        <div className="flex items-center flex-col gap-10 z-20">
           <div>
             <h1 className="font-[700] leading-[55px] m-0 p-0 text-[55px]">
               O MELHOR PARA O SEU <br /> CONDOMÍNIO
@@ -22,6 +25,7 @@ function HomeDesktop() {
             Solicitar orçamento
           </button>
         </div>
+        <div className="absolute w-full h-full navbarBackground top-0 left-0 z-10"></div>
       </section>
       <section className="max-w-[1400px] justify-center min-h-[700px] w-[90%] flex items-center gap-[5%] my-10">
         <div className="w-[40%] h-full min-h-[600px] flex flex-col justify-between">
@@ -33,16 +37,28 @@ function HomeDesktop() {
             Só quem tem mais de 20 anos de experiência no segmento e as melhores
             tecnologias pode garantir a sua segurança e de sua família.
           </p>
-          <div className="bg-black h-[380px]"></div>
+          <div className="">
+            <Image
+              src={sobre}
+              alt="Video"
+              style={{ width: "100%", height: "auto", overflow: "hidden" }}
+            />
+          </div>
         </div>
         <div className="w-[40%] h-full flex flex-col justify-start gap-12">
-          <div className="bg-black h-[300px]"></div>
+          <div className="">
+            <Image
+              src={video}
+              alt="Video"
+              style={{ width: "100%", height: "auto", overflow: "hidden" }}
+            />
+          </div>
           <div className="flex flex-col gap-8">
-            <p className="text-[21px]">Uma família que cuida da sua família!</p>
             <p className="text-[21px]">
-              Só quem tem mais de 20 anos de experiência no segmento e as
-              melhores tecnologias pode garantir a sua segurança e de sua
-              família.
+              Nosso compromisso é cuidar e proteger. Contamos com profissionais
+              treinados e equipados, armados ou desarmados, além de
+              monitoramento de imagens, controle de acesso e vigilância
+              ostensiva para prevenir crimes.
             </p>
           </div>
         </div>
@@ -67,14 +83,30 @@ function HomeDesktop() {
           <h1 className="text-white font-[700] text-[33px]">Nossos clientes</h1>
           <p className="text-white text-[26px] w-[680px]">
             Nossos clientes sempre recebem o melhor atendimento possível, somos
-            referencia em qualidade e excelência{" "}
+            referência em qualidade e excelência
           </p>
         </div>
         <div className="flex items-center justify-end w-[93%]">
-          <Testimonial classNameCard="relative left-10 bottom-3 z-10" />
+          <Testimonial
+            label="Elisabeth Trevizan Pastore"
+            text="Só tenho que elogiar as pessoas que trabalham no nosso condominio , pessoas educadas e
+que trabalham para a melhoria do nosdo ambiente. Parabéns a vcs"
+            classNameCard="relative left-10 bottom-3 z-10"
+          />
           <div className="flex flex-col gap-6">
-            <Testimonial classNameCard="relative left-2" />
-            <Testimonial opacity={"30"} classNameCard="relative left-[-15px]" />
+            <Testimonial
+              label="Gilson Roberto de Paula"
+              text="A maior no segmento, também no Vale do Paraíba, sem comparação, benefícios e
+compromissos em dia, respeito aos funcionários."
+              classNameCard="relative left-2"
+            />
+            <Testimonial
+              label="Cintia"
+              text="CGTECH é a maior e mais sólida do mercado, única com certidões negativadas que garante a
+segurança do condomínio e do funcionário"
+              opacity={"30"}
+              classNameCard="relative left-[-15px]"
+            />
           </div>
         </div>
         <div className="ml-16">
@@ -89,12 +121,30 @@ function HomeDesktop() {
         </p>
         <div className="flex w-[95%] mt-14 flex-row justify-center items-center">
           <div className="w-[50%]">
-            <CardPortal />
-            <CardPortal reverse={true} />
+            <CardPortal
+              title="Dicas de Segurança para Condomínios"
+              text="Conselhos práticos para melhorar a segurança no seu condomínio, abrangendo desde medidas
+preventivas até ações de emergência."
+            />
+            <CardPortal
+              title="Tecnologia de Segurança"
+              text="Descubra como as novas tecnologias estão transformando a segurança patrimonial, desde
+sistemas de vigilância avançados até inteligência artificial."
+              reverse={true}
+            />
           </div>
           <div className="w-[50%]">
-            <CardPortal />
-            <CardPortal reverse={true} />
+            <CardPortal
+              title="Tendências em Segurança Patrimonial"
+              text="Fique por dentro das últimas novidades e inovações em segurança patrimonial, com análises
+de especialistas e previsões de mercado."
+            />
+            <CardPortal
+              title="Prevenção de Riscos"
+              text="Artigos sobre como identificar e mitigar riscos potenciais em seu condomínio ou empresa,
+mantendo todos protegidos."
+              reverse={true}
+            />
           </div>
         </div>
       </section>

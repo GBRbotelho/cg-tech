@@ -11,8 +11,7 @@ function CardPortal(props: CardPortalProps) {
   const [truncatedText, setTruncatedText] = useState("");
 
   useEffect(() => {
-    const originalText =
-      props.text || "Aqui fica o texto do card a sua escolha.";
+    const originalText = props.text || "";
 
     const maxLength = 180;
     if (originalText.length > maxLength) {

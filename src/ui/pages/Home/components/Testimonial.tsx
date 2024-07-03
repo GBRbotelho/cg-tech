@@ -3,6 +3,8 @@ import React from "react";
 type TestimonialProps = {
   classNameCard?: string;
   opacity?: string;
+  label: string;
+  text: string;
 };
 
 function Testimonial(props: TestimonialProps) {
@@ -12,17 +14,13 @@ function Testimonial(props: TestimonialProps) {
         props.classNameCard || ""
       }`}
     >
-      <div className="w-[55px] relative bottom-7 min-w-[55px] min-h[55px] h-[70px] bg-slate-100 rounded-full"></div>
+      <div className="w-[55px] relative bottom-7 min-w-[55px] min-h[55px] h-[55px] bg-slate-100 rounded-full"></div>
       <div className="w-full max-w-[260px] flex flex-col gap-3">
         <div>
-          <h1 className="font-[700]">Elisabeth Trevizan Pastore</h1>
+          <h1 className="font-[700]">{props.label}</h1>
           <i></i>
         </div>
-        <p className="text-[14px] leading-[15px]">
-          Só tenho que elogiar as pessoas que trabalham no nosso condominio ,
-          pessoas educadas e que trabalham para a melhoria do nosdo ambiente.
-          Parabéns a vcs .
-        </p>
+        <p className="text-[14px] leading-[15px]">{props.text}</p>
       </div>
       {props.opacity && (
         <div

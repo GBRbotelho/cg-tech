@@ -29,19 +29,19 @@ function SwiperUnitys(props: Props) {
         watchSlidesProgress
       >
         <SwiperSlide>
-          <CardUnity />
+          <CardUnity text="Campinas" />
         </SwiperSlide>
         <SwiperSlide>
-          <CardUnity />
+          <CardUnity text="Indaiatuba" />
         </SwiperSlide>
         <SwiperSlide>
-          <CardUnity />
+          <CardUnity text="São Paulo" />
         </SwiperSlide>
         <SwiperSlide>
-          <CardUnity />
+          <CardUnity text="São Jose dos Campos" />
         </SwiperSlide>
         <SwiperSlide>
-          <CardUnity />
+          <CardUnity text="Jundiai" />
         </SwiperSlide>
       </Swiper>
       <div className="absolute left-[102%]">

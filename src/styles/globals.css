@@ -2,8 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+button {
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
 .bcground {
-  background-image: url("../assets/imgs/Home/Section1.webp");
+  background-image: url("../public/imgs/Home/Section1.webp");
 }
 
 .boxShadow {
@@ -15,11 +24,11 @@
 }
 
 .gradientBackground2 {
-  background: linear-gradient(to left, #8CB1F9, #8CA0BC);
+  background: linear-gradient(to left, #8cb1f9, #8ca0bc);
 }
 
 .navbarBackground {
-  background: linear-gradient(to bottom, #000000, transparent);
+  background: linear-gradient(to bottom, #000000 5%, transparent);
 }
 
 @font-face {
@@ -73,4 +82,5 @@
 
 body {
   font-family: "Open Sauce One", sans-serif;
+  scrollbar-width: none;
 }

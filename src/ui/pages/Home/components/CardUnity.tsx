@@ -1,13 +1,17 @@
 import React from "react";
 
-function CardUnity() {
+type Props = {
+  text: string;
+};
+
+function CardUnity(props: Props) {
   return (
     <div className="w-full py-10 flex flex-col justify-center items-center">
       <div
         className={`w-full overflow-hidden flex flex-col h-[400px] justify-between`}
       >
         <div className="w-full bg-black h-[90%] rounded-lg"></div>
-        <span className="font-[700] text-[21px]">Campinas</span>
+        <span className="font-[700] text-[21px]">{props.text}</span>
       </div>
     </div>
   );

@@ -4,6 +4,9 @@ import Testimonial from "./components/Testimonial";
 import Button from "@/ui/components/utils/Button";
 import CardPortal from "./components/CardPortal";
 import SwiperUnitys from "./components/SwiperUnitys";
+import Image from "next/image";
+import video from "@/public/imgs/Home/video.webp";
+import sobre from "@/public/imgs/Home/sobre.webp";
 
 function HomeMobile() {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -29,7 +32,8 @@ function HomeMobile() {
   return (
     <main className="bg-[#f5f5f5] flex flex-col items-center w-screen lg:hidden">
       <section className="w-full bcground text-center text-white h-[48vw] min-h-[500px] max-h-[700px] bg-cover bg-center items-center justify-center flex">
-        <div className="flex items-center flex-col gap-10">
+        <div className="absolute w-full h-full navbarBackground top-0 left-0 z-10"></div>
+        <div className="flex items-center flex-col gap-10 z-20">
           <div className="w-[95%]">
             <h1 className="font-[700] leading-[55px] m-0 p-0 text-[43px]">
               O MELHOR PARA O SEU CONDOMÍNIO
@@ -44,7 +48,7 @@ function HomeMobile() {
         </div>
       </section>
       <section className="max-w-[1400px] justify-center w-[90%] flex flex-col items-center gap-10 my-10">
-        <div className="w-full h-full min-h-[600px] flex flex-col gap-5 justify-center">
+        <div className="w-full max-w-[600px] h-full min-h-[600px] flex flex-col gap-5 justify-center">
           <div>
             <h1 className="text-[38px] font-[800]">Sobre a CGTECH</h1>
             <p className="text-[21px]">Uma família que cuida da sua família!</p>
@@ -53,16 +57,28 @@ function HomeMobile() {
             Só quem tem mais de 20 anos de experiência no segmento e as melhores
             tecnologias pode garantir a sua segurança e de sua família.
           </p>
-          <div className="bg-black h-[380px] max-w-[500px]"></div>
+          <div className=" max-w-[500px]">
+            <Image
+              src={sobre}
+              alt="Video"
+              style={{ width: "auto", height: "100%" }}
+            />
+          </div>
         </div>
-        <div className="w-full h-full flex flex-col justify-start gap-12">
-          <div className="bg-black h-[300px]"></div>
+        <div className="w-full max-w-[600px] h-full flex flex-col justify-start gap-12">
+          <div className=" max-w-[500px]">
+            <Image
+              src={video}
+              alt="Video"
+              style={{ width: "100%", overflow: "hidden" }}
+            />
+          </div>
           <div className="flex flex-col gap-8">
-            <p className="text-[21px]">Uma família que cuida da sua família!</p>
             <p className="text-[21px]">
-              Só quem tem mais de 20 anos de experiência no segmento e as
-              melhores tecnologias pode garantir a sua segurança e de sua
-              família.
+              Nosso compromisso é cuidar e proteger. Contamos com profissionais
+              treinados e equipados, armados ou desarmados, além de
+              monitoramento de imagens, controle de acesso e vigilância
+              ostensiva para prevenir crimes.
             </p>
           </div>
         </div>
@@ -95,9 +111,25 @@ function HomeMobile() {
           </p>
         </div>
         <div className="flex items-center flex-col gap-5 w-[93%]">
-          <Testimonial />
-          <Testimonial />
-          <Testimonial />
+          <Testimonial
+            label="Elisabeth Trevizan Pastore"
+            text="Só tenho que elogiar as pessoas que trabalham no nosso condominio , pessoas educadas e
+que trabalham para a melhoria do nosdo ambiente. Parabéns a vcs"
+            classNameCard="relative"
+          />
+          <Testimonial
+            label="Gilson Roberto de Paula"
+            text="A maior no segmento, também no Vale do Paraíba, sem comparação, benefícios e
+compromissos em dia, respeito aos funcionários."
+            classNameCard="relative"
+          />
+          <Testimonial
+            label="Cintia"
+            text="CGTECH é a maior e mais sólida do mercado, única com certidões negativadas que garante a
+segurança do condomínio e do funcionário"
+            opacity={"30"}
+            classNameCard="relative"
+          />
         </div>
         <div className="ml-16">
           <Button name="Quero ser cliente" className="px-6" />
@@ -110,12 +142,16 @@ function HomeMobile() {
         </p>
         <div className="flex w-[95%] mt-14 flex-col justify-center items-center">
           <div className="w-full max-w-[500px]">
-            <CardPortal />
-            <CardPortal reverse={true} />
+            <CardPortal title="Dicas de Segurança para Condomínios" text="" />
+            <CardPortal
+              title="Tecnologia de Segurança"
+              text=""
+              reverse={true}
+            />
           </div>
           <div className="w-full max-w-[500px]">
-            <CardPortal />
-            <CardPortal reverse={true} />
+            <CardPortal title="Tendências em Segurança Patrimonial" text="" />
+            <CardPortal title="Prevenção de Riscos" text="" reverse={true} />
           </div>
         </div>
       </section>
