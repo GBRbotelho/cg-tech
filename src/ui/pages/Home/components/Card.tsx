@@ -5,6 +5,7 @@ type CardProps = {
   active: boolean;
   label: string;
   text: string;
+  children?: React.ReactNode;
 };
 
 function Card(props: CardProps) {
@@ -15,7 +16,7 @@ function Card(props: CardProps) {
           props.active ? "boxShadow" : ""
         }`}
       >
-        <div className="bg-black h-[200px]"></div>
+        <div className="h-[230px] overflow-y-hidden">{props.children}</div>
         <div className="relative w-full bottom-[30px] flex flex-col items-center">
           <div className="flex flex-col items-center w-[85%] gap-5">
             <h2 className="font-[800] text-[27px] w-full">{props.label}</h2>

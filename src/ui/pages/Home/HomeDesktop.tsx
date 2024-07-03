@@ -11,7 +11,8 @@ import Image from "next/image";
 function HomeDesktop() {
   return (
     <main className="bg-[#f5f5f5] hidden flex-col items-center w-screen lg:flex">
-      <section className="w-full bcground text-center text-white h-[48vw] min-h-[800px] max-h-[700px] bg-cover bg-center items-center justify-center flex">
+      <section className="w-screen bcground text-center text-white h-[48vw] min-h-[800px] max-h-[700px] bg-cover bg-center items-center justify-center flex">
+        <div className="absolute w-screen h-[48vw] min-h-[800px] max-h-[700px] navbarBackground top-0 left-0 z-10"></div>
         <div className="flex items-center flex-col gap-10 z-20">
           <div>
             <h1 className="font-[700] leading-[55px] m-0 p-0 text-[55px]">
@@ -25,7 +26,6 @@ function HomeDesktop() {
             Solicitar orçamento
           </button>
         </div>
-        <div className="absolute w-full h-full navbarBackground top-0 left-0 z-10"></div>
       </section>
       <section className="max-w-[1400px] justify-center min-h-[700px] w-[90%] flex items-center gap-[5%] my-10">
         <div className="w-[40%] h-full min-h-[600px] flex flex-col justify-between">
@@ -113,7 +113,7 @@ segurança do condomínio e do funcionário"
           <Button name="Quero ser cliente" className="px-6" />
         </div>
       </section>
-      <section className="w-full rounded-[6px] my-10 max-w-[1400px] flex flex-col justify-center items-center">
+      {/* <section className="w-full rounded-[6px] my-10 max-w-[1400px] flex flex-col justify-center items-center">
         <h1 className="font-[700] text-[36px]">Ultimas Novidades do Portal</h1>
         <p className="text-[24px] text-center">
           Se mantenha sempre atualizado sobre o mundo da <br /> segurança e
@@ -153,7 +153,7 @@ mantendo todos protegidos."
         <div className="relative w-[90%] my-0 flex items-center">
           <SwiperUnitys slides={4} />
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }

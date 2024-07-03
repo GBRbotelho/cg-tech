@@ -14,7 +14,9 @@ function Testimonial(props: TestimonialProps) {
         props.classNameCard || ""
       }`}
     >
-      <div className="w-[55px] relative bottom-7 min-w-[55px] min-h[55px] h-[55px] bg-slate-100 rounded-full"></div>
+      <div className="w-[55px] relative bottom-7 min-w-[55px] min-h[55px] h-[55px] flex items-center justify-center bg-slate-400 rounded-full">
+        <h1 className="w-fit h-fit text-[25px] font-[700]">{props.label[0]}</h1>
+      </div>
       <div className="w-full max-w-[260px] flex flex-col gap-3">
         <div>
           <h1 className="font-[700]">{props.label}</h1>

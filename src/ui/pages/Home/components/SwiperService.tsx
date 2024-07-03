@@ -5,6 +5,19 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Card from "./Card";
+import Image from "next/image";
+
+import cftv from "../../../../public/imgs/Home/cftv.webp";
+import controle from "../../../../public/imgs/Home/controle.webp";
+import portaria from "../../../../public/imgs/Home/portaria.webp";
+import segurancapatrimonial from "../../../../public/imgs/Home/segurancapatrimonial.webp";
+import supervisor from "../../../../public/imgs/Home/supervisor.webp";
+import limpeza from "../../../../public/imgs/Home/limpeza.webp";
+import jardineiro from "../../../../public/imgs/Home/jardineiro.webp";
+import manutencao from "../../../../public/imgs/Home/manutencao.webp";
+import zeladoria from "../../../../public/imgs/Home/zeladoria.webp";
+import gerente from "../../../../public/imgs/Home/gerente.webp";
+import adm from "../../../../public/imgs/Home/adm.webp";
 
 type Props = {
   slides: number;
@@ -35,7 +48,9 @@ function SwiperService(props: Props) {
               text="Proteja seu patrimônio com nossa equipe treinada e equipada, garantindo vigilância constante
 e estratégias personalizadas para a sua segurança."
               active={isVisible ? true : false}
-            />
+            >
+              <Image src={segurancapatrimonial} alt="Segurança Patrimonial" />
+            </Card>
           )}
         </SwiperSlide>
         <SwiperSlide>
@@ -45,7 +60,9 @@ e estratégias personalizadas para a sua segurança."
               text="Controle total de entrada e saída com tecnologia avançada, prevenindo acessos não
 autorizados e garantindo um ambiente seguro."
               active={isVisible ? true : false}
-            />
+            >
+              <Image src={controle} alt="Segurança Patrimonial" />
+            </Card>
           )}
         </SwiperSlide>
         <SwiperSlide>
@@ -55,7 +72,9 @@ autorizados e garantindo um ambiente seguro."
               text="Monitore seu espaço em tempo real com sistemas de CFTV de alta qualidade, garantindo
 vigilância constante e acesso remoto."
               active={isVisible ? true : false}
-            />
+            >
+              <Image src={cftv} alt="Segurança Patrimonial" />
+            </Card>
           )}
         </SwiperSlide>
         <SwiperSlide>
@@ -65,7 +84,9 @@ vigilância constante e acesso remoto."
               text="Profissionais capacitados para recepção e vigilância, garantindo segurança, controle e
 tranquilidade para moradores e visitantes."
               active={isVisible ? true : false}
-            />
+            >
+              <Image src={portaria} alt="Segurança Patrimonial" />
+            </Card>
           )}
         </SwiperSlide>
         <SwiperSlide>
@@ -75,7 +96,9 @@ tranquilidade para moradores e visitantes."
               text="Mantenha seu ambiente impecável com nossa equipe de limpeza, garantindo um espaço
 sempre higienizado e agradável."
               active={isVisible ? true : false}
-            />
+            >
+              <Image src={limpeza} alt="Limpeza" />
+            </Card>
           )}
         </SwiperSlide>
         <SwiperSlide>
@@ -85,7 +108,9 @@ sempre higienizado e agradável."
               text="Serviços de zeladoria dedicados a cuidar de todas as necessidades do seu condomínio,
 garantindo organização e bom funcionamento."
               active={isVisible ? true : false}
-            />
+            >
+              <Image src={zeladoria} alt="Zeladoria" />
+            </Card>
           )}
         </SwiperSlide>
         <SwiperSlide>
@@ -95,7 +120,9 @@ garantindo organização e bom funcionamento."
               text="Cuide de todas as suas necessidades de manutenção com nossa equipe especializada, pronta
 para resolver problemas rapidamente."
               active={isVisible ? true : false}
-            />
+            >
+              <Image src={manutencao} alt="Manutenção" />
+            </Card>
           )}
         </SwiperSlide>
         <SwiperSlide>
@@ -105,19 +132,21 @@ para resolver problemas rapidamente."
               text="Transforme seus jardins com nossos serviços de jardinagem, mantendo áreas verdes sempre
 bonitas e bem cuidadas."
               active={isVisible ? true : false}
-            />
+            >
+              <Image src={jardineiro} alt="Jardineiro" />
+            </Card>
           )}
         </SwiperSlide>
-        <SwiperSlide>
+        {/* <SwiperSlide>
           {({ isVisible }) => (
             <Card
               label="Mensageiro"
               text="Agilidade e eficiência na entrega de correspondências e pacotes com nossos serviços de
 mensageiro, garantindo pontualidade e segurança."
               active={isVisible ? true : false}
-            />
+            ></Card>
           )}
-        </SwiperSlide>
+        </SwiperSlide> */}
         <SwiperSlide>
           {({ isVisible }) => (
             <Card
@@ -125,7 +154,9 @@ mensageiro, garantindo pontualidade e segurança."
               text="Conte com apoio administrativo eficiente para organizar e gerenciar tarefas cotidianas do seu
 condomínio ou empresa."
               active={isVisible ? true : false}
-            />
+            >
+              <Image src={adm} alt="Administrativo" />
+            </Card>
           )}
         </SwiperSlide>
         <SwiperSlide>
@@ -135,7 +166,9 @@ condomínio ou empresa."
               text="Gestão completa e profissional do seu condomínio com nossos gerentes condominiais,
 garantindo operações suaves e satisfatórias."
               active={isVisible ? true : false}
-            />
+            >
+              <Image src={gerente} alt="Gerente Condominal" />
+            </Card>
           )}
         </SwiperSlide>
         <SwiperSlide>
@@ -145,7 +178,9 @@ garantindo operações suaves e satisfatórias."
               text="Supervisão dedicada para assegurar que todos os serviços sejam executados com excelência e
 eficiência, proporcionando tranquilidade e segurança."
               active={isVisible ? true : false}
-            />
+            >
+              <Image src={supervisor} alt="Supervisor" />
+            </Card>
           )}
         </SwiperSlide>
       </Swiper>

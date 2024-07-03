@@ -32,49 +32,41 @@ function HomeMobile() {
   return (
     <main className="bg-[#f5f5f5] flex flex-col items-center w-screen lg:hidden">
       <section className="w-full bcground text-center text-white h-[48vw] min-h-[500px] max-h-[700px] bg-cover bg-center items-center justify-center flex">
-        <div className="absolute w-full h-full navbarBackground top-0 left-0 z-10"></div>
+        <div className="absolute w-full h-[48vw] min-h-[500px] max-h-[700px] navbarBackground top-0 left-0 z-10"></div>
         <div className="flex items-center flex-col gap-10 z-20">
           <div className="w-[95%]">
-            <h1 className="font-[700] leading-[55px] m-0 p-0 text-[43px]">
+            <h1 className="font-[700] leading-[55px] m-0 p-0 text-[32px]">
               O MELHOR PARA O SEU CONDOMÍNIO
             </h1>
-            <p className="text-[30px] m-0 p-0">
+            <p className="text-[20px] m-0 p-0">
               Soluções completas e eficientes{" "}
             </p>
           </div>
-          <button className="text-[25px] bg-[#5271ff] w-fit px-5 py-1 rounded-[5px]">
+          <button className="text-[20px] bg-[#5271ff] w-fit px-5 py-1 rounded-[5px]">
             Solicitar orçamento
           </button>
         </div>
       </section>
-      <section className="max-w-[1400px] justify-center w-[90%] flex flex-col items-center gap-10 my-10">
-        <div className="w-full max-w-[600px] h-full min-h-[600px] flex flex-col gap-5 justify-center">
+      <section className="max-w-[1400px] justify-center w-[90%] flex flex-col items-center gap-2 my-0">
+        <div className="w-full max-w-[600px] h-full min-h-[600px] flex flex-col gap-2 justify-center">
           <div>
-            <h1 className="text-[38px] font-[800]">Sobre a CGTECH</h1>
-            <p className="text-[21px]">Uma família que cuida da sua família!</p>
+            <h1 className="text-[34px] font-[800]">Sobre a CGTECH</h1>
+            <p className="text-[18px]">Uma família que cuida da sua família!</p>
           </div>
-          <p className="text-[21px]">
+          <p className="text-[18px]">
             Só quem tem mais de 20 anos de experiência no segmento e as melhores
             tecnologias pode garantir a sua segurança e de sua família.
           </p>
-          <div className=" max-w-[500px]">
-            <Image
-              src={sobre}
-              alt="Video"
-              style={{ width: "auto", height: "100%" }}
-            />
+          <div className=" max-w-[600px]">
+            <Image src={sobre} alt="Video" />
           </div>
         </div>
         <div className="w-full max-w-[600px] h-full flex flex-col justify-start gap-12">
-          <div className=" max-w-[500px]">
-            <Image
-              src={video}
-              alt="Video"
-              style={{ width: "100%", overflow: "hidden" }}
-            />
+          <div className=" max-w-[600px]">
+            <Image src={video} alt="Video" />
           </div>
           <div className="flex flex-col gap-8">
-            <p className="text-[21px]">
+            <p className="text-[18px]">
               Nosso compromisso é cuidar e proteger. Contamos com profissionais
               treinados e equipados, armados ou desarmados, além de
               monitoramento de imagens, controle de acesso e vigilância
@@ -84,14 +76,12 @@ function HomeMobile() {
         </div>
       </section>
       <section className="max-w-[1400px] w-[95%] flex flex-col items-center justify-center my-10">
-        <h1 className="text-[38px] font-[800] text-center">
+        <h1 className="text-[30px] font-[800] text-center">
           Entregando sempre o melhor para os nossos clientes
         </h1>
-        <p className="text-center text-[21px] font-[400]">
+        <p className="text-center text-[18px] font-[400]">
           Criamos pacotes de serviços personalizados para que você tenha a
-          melhor
-          <br />
-          solução ao seu alcance
+          melhor solução ao seu alcance
         </p>
         <div
           className={`w-[95%] ${
@@ -104,8 +94,8 @@ function HomeMobile() {
 
       <section className="w-[95vw] rounded-[6px] items-center gap-5 py-10 my-10 max-w-[1400px] flex flex-col gradientBackground2 justify-center">
         <div className="ml-16">
-          <h1 className="text-white font-[700] text-[33px]">Nossos clientes</h1>
-          <p className="text-white text-[26px] w-[90%]">
+          <h1 className="text-white font-[700] text-[30px]">Nossos clientes</h1>
+          <p className="text-white text-[18px] w-[90%]">
             Nossos clientes sempre recebem o melhor atendimento possível, somos
             referencia em qualidade e excelência{" "}
           </p>
@@ -131,11 +121,11 @@ segurança do condomínio e do funcionário"
             classNameCard="relative"
           />
         </div>
-        <div className="ml-16">
+        <div className="">
           <Button name="Quero ser cliente" className="px-6" />
         </div>
       </section>
-      <section className="w-[95%] rounded-[6px] my-10 max-w-[1400px] flex flex-col justify-center items-center">
+      {/* <section className="w-[95%] rounded-[6px] my-10 max-w-[1400px] flex flex-col justify-center items-center">
         <h1 className="font-[700] text-[36px]">Ultimas Novidades do Portal</h1>
         <p className="text-[24px]">
           Se mantenha sempre atualizado sobre o mundo da segurança e facilities
@@ -172,7 +162,7 @@ segurança do condomínio e do funcionário"
             }
           />
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }
