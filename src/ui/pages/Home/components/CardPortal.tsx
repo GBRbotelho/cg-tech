@@ -5,6 +5,7 @@ type CardPortalProps = {
   title?: string;
   text?: string;
   img?: string;
+  children?: React.ReactNode;
 };
 
 function CardPortal(props: CardPortalProps) {
@@ -27,13 +28,13 @@ function CardPortal(props: CardPortalProps) {
         props.reverse && "flex-row-reverse"
       }`}
     >
-      <div className="bg-black w-[50%]"></div>
+      <div className="w-[50%] overflow-hidden">{props.children}</div>
       <div className="w-[50%] flex items-center justify-center">
         <div className="flex flex-col w-[85%] h-[90%] justify-evenly">
           <h2 className="font-[700] text-[24px]">{props.title || "Titulo"}</h2>
           <p className="text-[11.5px] max-w-full">{truncatedText}</p>
           <div>
-            <button className="text-blue-600 text-[13px]">Ler mais</button>
+            <button className="text-blue-600 text-[13px]">Em breve</button>
           </div>
         </div>
       </div>

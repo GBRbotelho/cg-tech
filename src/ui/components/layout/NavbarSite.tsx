@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import logo from "@/public/imgs/logo.webp";
+import Image from "next/image";
 
 function NavbarSite() {
   const [navbarBackground, setNavbarBackground] = useState(false);
@@ -36,17 +38,34 @@ function NavbarSite() {
       } ${visible ? "" : "transform -translate-y-full"}`}
     >
       <div className="flex w-[95%] py-6 justify-between items-center">
-        <div className="w-[210px]">Logo</div>
+        <div className="w-[210px]">
+          <Image src={logo} alt="Logo" height={50} />
+        </div>
         <ul className="hidden gap-6 text-[18px] lg:flex">
-          <li>Home</li>
-          <li>Portal</li>
-          <li>Sobre nós</li>
-          <li>Trabalhe conosco</li>
+          <li className="cursor-pointer transition duration-200 hover:scale-105 hover:text-[#5271ff]">
+            Home
+          </li>
+          {/* <li className="cursor-pointer transition duration-200 hover:scale-105 hover:text-[#5271ff]">
+            Portal
+          </li>
+          <li className="cursor-pointer transition duration-200 hover:scale-105 hover:text-[#5271ff]">
+            Sobre nós
+          </li> */}
+          <li className="cursor-pointer transition duration-200 hover:scale-105 hover:text-[#5271ff]">
+            <a
+              target="ablank"
+              href="http://srvcgt01.brazilsouth.cloudapp.azure.com/GesOperWeb/selfun.acessar.aspx"
+            >
+              Trabalhe conosco
+            </a>
+          </li>
         </ul>
         <div className="w-[210px] hidden lg:block">
-          <button className="bg-[#003f88] rounded-[5px] py-2 px-5">
-            Acesso Funcionários
-          </button>
+          <a target="ablank" href="https://app.pipefy.com/public/form/6C3h3rJb">
+            <button className="bg-[#003f88] rounded-[5px] py-2 px-5">
+              Acesso Funcionários
+            </button>
+          </a>
         </div>
         <div
           className="HAMBURGER-ICON space-y-2 block lg:hidden"
@@ -76,22 +95,34 @@ function NavbarSite() {
             </svg>
           </div>
           <ul className="flex flex-col items-center justify-between min-h-[250px]">
-            <li className="border-b border-gray-400 my-8 uppercase text-black">
-              <a href="/about">Home</a>
+            <li className="border-b border-gray-400 my-8 uppercase text-black cursor-pointer transition duration-200 hover:scale-105">
+              <a target="ablank" href="">
+                Home
+              </a>
+            </li>
+            {/* <li className="border-b border-gray-400 my-8 uppercase text-black cursor-pointer transition duration-200 hover:scale-105">
+              <a target="ablank" href="">Portal</a>
+            </li>
+            <li className="border-b border-gray-400 my-8 uppercase text-black cursor-pointer transition duration-200 hover:scale-105">
+              <a target="ablank" href="">Sobre nós</a>
+            </li> */}
+            <li className="border-b border-gray-400 my-8 uppercase text-black cursor-pointer transition duration-200 hover:scale-105">
+              <a
+                target="ablank"
+                href="http://srvcgt01.brazilsouth.cloudapp.azure.com/GesOperWeb/selfun.acessar.aspx"
+              >
+                Trabalhe conosco
+              </a>
             </li>
             <li className="border-b border-gray-400 my-8 uppercase text-black">
-              <a href="/portfolio">Portal</a>
-            </li>
-            <li className="border-b border-gray-400 my-8 uppercase text-black">
-              <a href="/contact">Sobre nós</a>
-            </li>
-            <li className="border-b border-gray-400 my-8 uppercase text-black">
-              <a href="/contact">Trabalhe conosco</a>
-            </li>
-            <li className="border-b border-gray-400 my-8 uppercase text-black">
-              <button className="bg-[#003f88] text-white rounded-[5px] py-2 px-5">
-                Acesso Funcionários
-              </button>
+              <a
+                target="ablank"
+                href="https://app.pipefy.com/public/form/6C3h3rJb"
+              >
+                <button className="bg-[#003f88] text-white rounded-[5px] py-2 px-5">
+                  Acesso Funcionários
+                </button>
+              </a>
             </li>
           </ul>
         </div>

@@ -20,7 +20,13 @@ function Testimonial(props: TestimonialProps) {
       <div className="w-full max-w-[260px] flex flex-col gap-3">
         <div>
           <h1 className="font-[700]">{props.label}</h1>
-          <i></i>
+          <i className="flex text-yellow-400">
+            <Star classname="h-[15px]" />
+            <Star classname="h-[15px]" />
+            <Star classname="h-[15px]" />
+            <Star classname="h-[15px]" />
+            <Star classname="h-[15px]" />
+          </i>
         </div>
         <p className="text-[14px] leading-[15px]">{props.text}</p>
       </div>
@@ -34,3 +40,14 @@ function Testimonial(props: TestimonialProps) {
 }
 
 export default Testimonial;
+
+const Star = (props: { classname?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={props.classname}
+  >
+    <path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path>
+  </svg>
+);

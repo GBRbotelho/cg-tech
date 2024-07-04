@@ -6,6 +6,10 @@ import CardPortal from "./components/CardPortal";
 import SwiperUnitys from "./components/SwiperUnitys";
 import video from "@/public/imgs/Home/video.webp";
 import sobre from "@/public/imgs/Home/sobre.webp";
+import portal1 from "@/public/imgs/Home/portal1.webp";
+import portal2 from "@/public/imgs/Home/portal2.webp";
+import portal3 from "@/public/imgs/Home/portal3.webp";
+import portal4 from "@/public/imgs/Home/portal4.webp";
 import Image from "next/image";
 
 function HomeDesktop() {
@@ -125,7 +129,7 @@ segurança do condomínio e do funcionário"
           <Button name="Quero ser cliente" className="px-6" />
         </div>
       </section>
-      {/* <section className="w-full rounded-[6px] my-10 max-w-[1400px] flex flex-col justify-center items-center">
+      <section className="w-full rounded-[6px] my-10 max-w-[1400px] flex flex-col justify-center items-center">
         <h1 className="font-[700] text-[36px]">Ultimas Novidades do Portal</h1>
         <p className="text-[24px] text-center">
           Se mantenha sempre atualizado sobre o mundo da <br /> segurança e
@@ -137,30 +141,38 @@ segurança do condomínio e do funcionário"
               title="Dicas de Segurança para Condomínios"
               text="Conselhos práticos para melhorar a segurança no seu condomínio, abrangendo desde medidas
 preventivas até ações de emergência."
-            />
+            >
+              <Image src={portal1} alt="Portal 1" />
+            </CardPortal>
             <CardPortal
               title="Tecnologia de Segurança"
               text="Descubra como as novas tecnologias estão transformando a segurança patrimonial, desde
 sistemas de vigilância avançados até inteligência artificial."
               reverse={true}
-            />
+            >
+              <Image src={portal2} alt="Portal 2" />
+            </CardPortal>
           </div>
           <div className="w-[50%]">
             <CardPortal
               title="Tendências em Segurança Patrimonial"
               text="Fique por dentro das últimas novidades e inovações em segurança patrimonial, com análises
 de especialistas e previsões de mercado."
-            />
+            >
+              <Image src={portal3} alt="Portal 3" />
+            </CardPortal>
             <CardPortal
               title="Prevenção de Riscos"
               text="Artigos sobre como identificar e mitigar riscos potenciais em seu condomínio ou empresa,
 mantendo todos protegidos."
               reverse={true}
-            />
+            >
+              <Image src={portal4} alt="Portal 4" />
+            </CardPortal>
           </div>
         </div>
       </section>
-      <section className="relative max-w-[1400px] w-full flex flex-col items-center justify-center my-10">
+      {/* <section className="relative max-w-[1400px] w-full flex flex-col items-center justify-center my-10">
         <h1 className="font-[700] w-[90%] text-[36px]">Nossas unidades</h1>
         <div className="relative w-[90%] my-0 flex items-center">
           <SwiperUnitys slides={4} />

@@ -8,6 +8,11 @@ import Image from "next/image";
 import video from "@/public/imgs/Home/video.webp";
 import sobre from "@/public/imgs/Home/sobre.webp";
 
+import portal1 from "@/public/imgs/Home/portal1.webp";
+import portal2 from "@/public/imgs/Home/portal2.webp";
+import portal3 from "@/public/imgs/Home/portal3.webp";
+import portal4 from "@/public/imgs/Home/portal4.webp";
+
 function HomeMobile() {
   const [windowWidth, setWindowWidth] = useState(0);
 
@@ -138,33 +143,37 @@ segurança do condomínio e do funcionário"
           <Button name="Quero ser cliente" className="px-6" />
         </div>
       </section>
-      {/* <section className="w-[95%] rounded-[6px] my-10 max-w-[1400px] flex flex-col justify-center items-center">
-        <h1 className="font-[700] text-[36px]">Ultimas Novidades do Portal</h1>
-        <p className="text-[24px]">
+      <section className="w-[95%] rounded-[6px] my-10 max-w-[1400px] flex flex-col justify-center items-center">
+        <h1 className="font-[700] text-[30px]">Ultimas Novidades do Portal</h1>
+        <p className="text-[18px]">
           Se mantenha sempre atualizado sobre o mundo da segurança e facilities
         </p>
         <div className="flex w-[95%] mt-14 flex-col justify-center items-center">
           <div className="w-full max-w-[500px]">
-            <CardPortal title="Dicas de Segurança para Condomínios" text="" />
-            <CardPortal
-              title="Tecnologia de Segurança"
-              text=""
-              reverse={true}
-            />
+            <CardPortal title="Dicas de Segurança para Condomínios" text="">
+              <Image src={portal1} alt="Portal 1" />
+            </CardPortal>
+            <CardPortal title="Tecnologia de Segurança" text="" reverse={true}>
+              <Image src={portal2} alt="Portal 2" />
+            </CardPortal>
           </div>
           <div className="w-full max-w-[500px]">
-            <CardPortal title="Tendências em Segurança Patrimonial" text="" />
-            <CardPortal title="Prevenção de Riscos" text="" reverse={true} />
+            <CardPortal title="Tendências em Segurança Patrimonial" text="">
+              <Image src={portal3} alt="Portal 3" />
+            </CardPortal>
+            <CardPortal title="Prevenção de Riscos" text="" reverse={true}>
+              <Image src={portal4} alt="Portal 4" />
+            </CardPortal>
           </div>
         </div>
       </section>
-      <section
+      {/* <section
         className={`relative  w-[95%] flex flex-col items-center justify-center my-10`}
       >
         <h1 className="font-[700] w-[90%] text-[36px]">Nossas unidades</h1>
         <div
-          className={`relative w-[80%] ${
-            windowWidth < 500 && "max-w-[200px]"
+          className={`relative w-[90%] ${
+            windowWidth < 500 && "max-w-[250px]"
           } my-0 flex items-center`}
         >
           <SwiperUnitys
