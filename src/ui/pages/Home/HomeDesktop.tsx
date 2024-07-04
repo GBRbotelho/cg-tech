@@ -129,14 +129,17 @@ segurança do condomínio e do funcionário"
           <Button name="Quero ser cliente" className="px-6" />
         </div>
       </section>
-      <section className="w-full rounded-[6px] my-10 max-w-[1400px] flex flex-col justify-center items-center">
+      <section
+        className="w-full rounded-[6px] my-10 max-w-[1400px] flex flex-col justify-center items-center"
+        data-aos="zoom-in-up"
+      >
         <h1 className="font-[700] text-[36px]">Ultimas Novidades do Portal</h1>
         <p className="text-[24px] text-center">
           Se mantenha sempre atualizado sobre o mundo da <br /> segurança e
           facilities
         </p>
         <div className="flex w-[95%] mt-14 flex-row justify-center items-center">
-          <div className="w-[50%]">
+          <div className="w-[50%]" data-aos="zoom-in-up">
             <CardPortal
               title="Dicas de Segurança para Condomínios"
               text="Conselhos práticos para melhorar a segurança no seu condomínio, abrangendo desde medidas
@@ -153,7 +156,7 @@ sistemas de vigilância avançados até inteligência artificial."
               <Image src={portal2} alt="Portal 2" />
             </CardPortal>
           </div>
-          <div className="w-[50%]">
+          <div className="w-[50%]" data-aos="zoom-in-up">
             <CardPortal
               title="Tendências em Segurança Patrimonial"
               text="Fique por dentro das últimas novidades e inovações em segurança patrimonial, com análises

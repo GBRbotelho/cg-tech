@@ -144,12 +144,14 @@ segurança do condomínio e do funcionário"
         </div>
       </section>
       <section className="w-[95%] rounded-[6px] my-10 max-w-[1400px] flex flex-col justify-center items-center">
-        <h1 className="font-[700] text-[30px]">Ultimas Novidades do Portal</h1>
-        <p className="text-[18px]">
+        <h1 className="font-[700] text-[30px]" data-aos="zoom-in-up">
+          Ultimas Novidades do Portal
+        </h1>
+        <p className="text-[18px]" data-aos="zoom-in-up">
           Se mantenha sempre atualizado sobre o mundo da segurança e facilities
         </p>
         <div className="flex w-[95%] mt-14 flex-col justify-center items-center">
-          <div className="w-full max-w-[500px]">
+          <div className="w-full max-w-[500px]" data-aos="zoom-in-up">
             <CardPortal title="Dicas de Segurança para Condomínios" text="">
               <Image src={portal1} alt="Portal 1" />
             </CardPortal>
@@ -157,7 +159,7 @@ segurança do condomínio e do funcionário"
               <Image src={portal2} alt="Portal 2" />
             </CardPortal>
           </div>
-          <div className="w-full max-w-[500px]">
+          <div className="w-full max-w-[500px]" data-aos="zoom-in-up">
             <CardPortal title="Tendências em Segurança Patrimonial" text="">
               <Image src={portal3} alt="Portal 3" />
             </CardPortal>
