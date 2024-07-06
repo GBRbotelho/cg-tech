@@ -26,9 +26,14 @@ function HomeDesktop() {
               Soluções completas e eficientes{" "}
             </p>
           </div>
-          <button className="text-[25px] bg-[#5271ff] w-fit px-5 py-1 rounded-[5px]">
-            Solicitar orçamento
-          </button>
+          <a
+            href="https://wa.me/5519974017905?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+            target="ablank"
+          >
+            <button className="text-[25px] bg-[#5271ff] w-fit px-5 py-1 rounded-[5px]">
+              Solicitar orçamento
+            </button>
+          </a>
         </div>
       </section>
       <section className="max-w-[1400px] justify-center min-h-[700px] w-[90%] flex items-center gap-[5%] my-10">
@@ -126,7 +131,12 @@ segurança do condomínio e do funcionário"
           </div>
         </div>
         <div className="ml-16">
-          <Button name="Quero ser cliente" className="px-6" />
+          <a
+            href="https://wa.me/5519974017905?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+            target="ablank"
+          >
+            <Button name="Quero ser cliente" className="px-6" />
+          </a>
         </div>
       </section>
       <section

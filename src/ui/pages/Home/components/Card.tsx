@@ -25,7 +25,16 @@ function Card(props: CardProps) {
         </div>
         <div className="flex relative flex-col mb-6 w-full items-center">
           <div className="w-[80%] flex flex-col">
-            <Button bgColor=" gradientBackground" name="Quero ser cliente" />
+            <a
+              href="https://wa.me/5519974017905?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+              target="ablank"
+            >
+              <Button
+                bgColor=" gradientBackground"
+                name="Quero ser cliente"
+                className="w-full"
+              />
+            </a>
           </div>
         </div>
       </div>

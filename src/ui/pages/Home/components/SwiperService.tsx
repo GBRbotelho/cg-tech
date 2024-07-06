@@ -174,8 +174,8 @@ garantindo operações suaves e satisfatórias."
         <SwiperSlide>
           {({ isVisible }) => (
             <Card
-              label="Supervisor"
-              text="Supervisão dedicada para assegurar que todos os serviços sejam executados com excelência e
+              label="Gerente Operacional"
+              text="Gerente dedicada para assegurar que todos os serviços sejam executados com excelência e
 eficiência, proporcionando tranquilidade e segurança."
               active={isVisible ? true : false}
             >
