@@ -17,6 +17,7 @@ function HomeDesktop() {
     <main className="bg-[#f5f5f5] hidden flex-col items-center w-screen lg:flex">
       <section className="w-screen bcground text-center text-white h-[48vw] min-h-[800px] max-h-[700px] bg-cover bg-center items-center justify-center flex">
         <div className="absolute w-screen h-[48vw] min-h-[800px] max-h-[700px] navbarBackground top-0 left-0 z-10"></div>
+        
         <div className="flex items-center flex-col gap-10 z-20">
           <div>
             <h1 className="font-[700] leading-[55px] m-0 p-0 text-[55px]">
@@ -36,6 +37,10 @@ function HomeDesktop() {
           </a>
         </div>
       </section>
+
+
+
+
       <section className="max-w-[1400px] justify-center min-h-[700px] w-[90%] flex items-center gap-[5%] my-10">
         <div
           className="w-[40%] h-full min-h-[600px] flex flex-col justify-between"
