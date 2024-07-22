@@ -7,24 +7,25 @@ import portal3 from "@/public/imgs/Home/portal3.webp";
 import portal4 from "@/public/imgs/Home/portal4.webp";
 import { ChevronDown } from 'lucide-react';
 
+
 function Portal() {
     return (
-        <main className="bg-[#ffffff] hidden flex-col items-center w-screen lg:flex">
-            <section className="bg-[#050642] w-screen text-center text-white h-[48vw] min-h-[800px] max-h-[700px] bg-cover bg-center flex flex-col items-center pt-60">
+        <main className="bg-[#f5f5f5] flex flex-col items-center w-screen lg:hidden">
+            <section className="bg-[#050642] w-screen text-center text-white h-[48vw] min-h-[1000px] max-h-[1200px] bg-cover bg-center flex flex-col items-center pt-16">
                 <div className="container mx-auto px-4 py-12">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                        <div className="">
-                            <div className="">
+                        <div className="flex justify-center">
+                            <div className="h-[300px] w-[500px]">
                                 <Image
                                     src={sobre}
                                     alt="Video"
-                                    style={{ width: "100%", height: "auto", overflow: "hidden" }}
+                                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
                                 />
                             </div>
                         </div>
                         <div className="text-left">
-                            <h1 className="font-[700] leading-[55px] m-0 pt-12 pb-6 text-[45px]">Titulo do primeiro artigo</h1>
-                            <p className="m-0 p-0 text-[20px] max-w-[500px]">
+                            <h1 className="font-[700] leading-[55px] m-0 pt-12 pb-6 text-[45px] flex items-center justify-center">Titulo do primeiro artigo</h1>
+                            <p className="m-0 p-0 text-[20px] flex justify-center">
                                 Só tenho que elogiar as pessoas que trabalham no nosso condominio , pessoas educadas e que trabalham para a melhoria do nosdo ambiente. Parabéns a vcs .
                             </p>
                             <a
@@ -40,15 +41,27 @@ function Portal() {
                 </div>
             </section>
 
-            <section className="bg-white-700 min-h-[700px] w-[100%] flex flex-col items-start">
-                <div className="ml-12 p-10 pb-2">
-                    <div className="flex justify-between mb-4" data-aos="zoom-in-up">
-                        <h2 className="font-[900] text-[#14168f] text-[30px] pb-4">Ultimas noticias</h2>
+
+            <section className="bg-white-700 min-h-[700px] w-full flex flex-col items-center md:items-start">
+                <div className=" p-10 mt-10 pb-2" data-aos="zoom-in-up">
+                    <h1 className="font-[800] text-[#14168f] text-[30px]">
+                        Últimas noticias
+                    </h1>
+                </div>
+
+                <div className="flex flex-col md:flex-row justify-center items-center md:space-x-6 text-[19px] p-10 pb-2"  data-aos="zoom-in-up">
+                    <div className="flex items-center py-2">
+                        Ordenar por
+                        <ChevronDown size={25} strokeWidth={5} className="ml-5" />
+                    </div>
+                    <div className="flex items-center py-2">
+                        Categorias
+                        <ChevronDown size={25} strokeWidth={5} className="ml-5" />
                     </div>
                 </div>
 
-                <div className="ml-12 p-10 flex gap-6" data-aos="zoom-in-up">
-                    <div className="h-[250px] w-[380px] flex items-center justify-center">
+                <div className=" p-10 bg-[#f5f5f5] flex flex-col gap-6"  data-aos="zoom-in-up">
+                    <div className="h-[250px] w-full max-w-[380px] bg-red-500 flex items-center justify-center">
                         <Image
                             src={portal4}
                             alt="Video"
@@ -57,7 +70,7 @@ function Portal() {
                     </div>
                     <div className="flex flex-col justify-center">
                         <h1 className="font-[800] text-[#14168f] leading-[55px] mb-2 text-[30px]">
-                            Titulo do primeiro artigo
+                            Título do primeiro artigo
                         </h1>
                         <p className="m-0 p-0 text-[18px] max-w-[500px]">
                             Só tenho que elogiar as pessoas que trabalham no nosso condomínio, pessoas educadas e que trabalham para a melhoria do nosso ambiente. Parabéns a vocês.
@@ -68,8 +81,8 @@ function Portal() {
                     </div>
                 </div>
 
-                <div className="ml-12 p-10 flex gap-6" data-aos="zoom-in-up">
-                    <div className="h-[250px] w-[380px] flex items-center justify-center">
+                <div className=" p-10 bg-[#f5f5f5] flex flex-col gap-6"  data-aos="zoom-in-up">
+                    <div className="h-[250px] w-full max-w-[380px] bg-red-500 flex items-center justify-center ">
                         <Image
                             src={portal3}
                             alt="Video"
@@ -78,7 +91,7 @@ function Portal() {
                     </div>
                     <div className="flex flex-col justify-center">
                         <h1 className="font-[800] text-[#14168f] leading-[55px] mb-2 text-[30px]">
-                            Titulo do primeiro artigo
+                            Título do segundo artigo
                         </h1>
                         <p className="m-0 p-0 text-[18px] max-w-[500px]">
                             Só tenho que elogiar as pessoas que trabalham no nosso condomínio, pessoas educadas e que trabalham para a melhoria do nosso ambiente. Parabéns a vocês.
@@ -89,8 +102,8 @@ function Portal() {
                     </div>
                 </div>
 
-                <div className="ml-12 p-10 flex gap-6" data-aos="zoom-in-up">
-                    <div className="h-[250px] w-[380px] flex items-center justify-center">
+                <div className=" p-10 bg-[#f5f5f5] flex flex-col gap-6"  data-aos="zoom-in-up">
+                    <div className="h-[250px] w-full max-w-[380px] bg-red-500 flex items-center justify-center">
                         <Image
                             src={portal2}
                             alt="Video"
@@ -99,7 +112,7 @@ function Portal() {
                     </div>
                     <div className="flex flex-col justify-center">
                         <h1 className="font-[800] text-[#14168f] leading-[55px] mb-2 text-[30px]">
-                            Titulo do primeiro artigo
+                            Título do terceiro artigo
                         </h1>
                         <p className="m-0 p-0 text-[18px] max-w-[500px]">
                             Só tenho que elogiar as pessoas que trabalham no nosso condomínio, pessoas educadas e que trabalham para a melhoria do nosso ambiente. Parabéns a vocês.
@@ -110,8 +123,8 @@ function Portal() {
                     </div>
                 </div>
 
-                <div className="ml-12 p-10 flex gap-6" data-aos="zoom-in-up">
-                    <div className="h-[250px] w-[380px] flex items-center justify-center">
+                <div className=" p-10 bg-[#f5f5f5] flex flex-col gap-6"  data-aos="zoom-in-up">
+                    <div className="h-[250px] w-full max-w-[380px] bg-red-500 flex items-center justify-center">
                         <Image
                             src={portal1}
                             alt="Video"
@@ -120,7 +133,7 @@ function Portal() {
                     </div>
                     <div className="flex flex-col justify-center">
                         <h1 className="font-[800] text-[#14168f] leading-[55px] mb-2 text-[30px]">
-                            Titulo do primeiro artigo
+                            Título do quarto artigo
                         </h1>
                         <p className="m-0 p-0 text-[18px] max-w-[500px]">
                             Só tenho que elogiar as pessoas que trabalham no nosso condomínio, pessoas educadas e que trabalham para a melhoria do nosso ambiente. Parabéns a vocês.
@@ -130,21 +143,8 @@ function Portal() {
                         </button>
                     </div>
                 </div>
-
-                <div className="flex items-end justify-end absolute right-0 mt-12 mr-12 space-x-4 text-[18px]" data-aos="zoom-in-up">
-                    <div className="flex items-end px-4 py-2 cursor-pointer">
-                        Ordenar por
-                        <ChevronDown size={25} strokeWidth={5} className="ml-5" />
-                    </div>
-                    <div className="flex items-end px-4 py-2 cursor-pointer">
-                        Categorias
-                        <ChevronDown size={25} strokeWidth={5} className="ml-5" />
-                    </div>
-                </div>
             </section>
         </main>
-
-        
     );
 }
 
