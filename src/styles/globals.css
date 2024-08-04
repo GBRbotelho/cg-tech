@@ -15,6 +15,10 @@ button:hover {
   background-image: url("../public/imgs/Home/Section1.webp");
 }
 
+.bgSobre {
+  background-image: url("../public/imgs/Sobre/backgroundsobre.webp");
+}
+
 .boxShadow {
   box-shadow: 9px 10px 12px 1px rgba(0, 0, 0, 0.3);
 }
