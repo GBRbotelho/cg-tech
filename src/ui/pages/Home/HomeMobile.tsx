@@ -13,6 +13,7 @@ import portal2 from "@/public/imgs/Home/portal2.webp";
 import portal3 from "@/public/imgs/Home/portal3.webp";
 import portal4 from "@/public/imgs/Home/portal4.webp";
 
+
 function HomeMobile() {
   const [windowWidth, setWindowWidth] = useState(0);
 
