@@ -15,8 +15,8 @@ import Image from "next/image";
 function HomeDesktop() {
   return (
     <main className="bg-[#f5f5f5] hidden flex-col items-center w-screen lg:flex">
-      <section className="w-screen bcground text-center text-white h-[48vw] min-h-[800px] max-h-[700px] bg-cover bg-center items-center justify-center flex">
-        <div className="absolute w-screen h-[48vw] min-h-[800px] max-h-[700px] navbarBackground top-0 left-0 z-10"></div>
+      <section className="w-screen bcground text-center text-white h-[48vw] min-h-[600px] max-h-[700px] bg-cover bg-center items-center justify-center flex">
+        <div className="absolute w-screen h-[48vw] min-h-[600px] max-h-[700px] navbarBackground top-0 left-0 z-10"></div>
         <div className="flex items-center flex-col gap-10 z-20">
           <div>
             <h1 className="font-[700] leading-[55px] m-0 p-0 text-[55px]">
