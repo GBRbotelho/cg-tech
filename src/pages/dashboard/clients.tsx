@@ -1,8 +1,15 @@
 import Navbar from "@/ui/components/layout/Navbar";
+import ClientsDesktop from "@/ui/pages/Dashboard/ClientsDesktop";
+import ClientsMobile from "@/ui/pages/Dashboard/ClientsMobile";
 import React from "react";
 
-function index() {
-  return <main className="">Clientes</main>;
+function Clients() {
+  return (
+    <>
+      <ClientsDesktop />
+      <ClientsMobile />
+    </>
+  );
 }
 
-export default index;
+export default Clients;

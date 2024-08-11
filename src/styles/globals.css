@@ -88,7 +88,9 @@ body {
   font-family: "Open Sauce One", sans-serif;
   scrollbar-width: none;
   overflow-x: hidden;
+  
 }
+
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 body::-webkit-scrollbar {
