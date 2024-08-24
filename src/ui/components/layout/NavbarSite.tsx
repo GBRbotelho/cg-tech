@@ -38,7 +38,7 @@ function NavbarSite() {
       } ${visible ? "" : "transform -translate-y-full"}`}
     >
       <div className="flex w-[95%] py-6 justify-between items-center">
-        <div className="w-[210px]">
+        <div className="lg:w-[390px]">
           <Image src={logo} alt="Logo" height={50} />
         </div>
         <ul className="hidden gap-6 text-[18px] lg:flex">
@@ -60,13 +60,30 @@ function NavbarSite() {
             </a>
           </li>
         </ul>
-        <div className="w-[210px] hidden lg:block">
+        <div className="hidden gap-5 lg:flex w-[390px]">
           <a target="ablank" href="https://app.pipefy.com/public/form/6C3h3rJb">
             <button className="bg-[#003f88] rounded-[5px] py-2 px-5">
               Acesso Funcionários
             </button>
           </a>
+          <a
+            target="ablank"
+            href="https://app.pipefy.com/public/form/nVewOHRz "
+          >
+            <button className="bg-[#003f88] rounded-[5px] py-2 px-5">
+              Acesso Gestão
+            </button>
+          </a>
         </div>
+        <div className="uppercase text-white cursor-pointer transition duration-200 lg:hidden hover:scale-105">
+          <a
+            target="ablank"
+            href="http://srvcgt01.brazilsouth.cloudapp.azure.com/GesOperWeb/selfun.acessar.aspx"
+          >
+            Trabalhe conosco
+          </a>
+        </div>
+
         <div
           className="HAMBURGER-ICON space-y-2 block lg:hidden"
           onClick={() => setIsNavOpen((prev) => !prev)}
@@ -121,6 +138,16 @@ function NavbarSite() {
               >
                 <button className="bg-[#003f88] text-white rounded-[5px] py-2 px-5">
                   Acesso Funcionários
+                </button>
+              </a>
+            </li>
+            <li className="border-b border-gray-400 my-8 uppercase text-black">
+              <a
+                target="ablank"
+                href="https://app.pipefy.com/public/form/nVewOHRz "
+              >
+                <button className="bg-[#003f88] text-white rounded-[5px] py-2 px-5">
+                  Acesso Gestão
                 </button>
               </a>
             </li>
