@@ -6,13 +6,12 @@ import CardPortal from "./components/CardPortal";
 import SwiperUnitys from "./components/SwiperUnitys";
 import Image from "next/image";
 import video from "@/public/imgs/Home/video.webp";
-import sobre from "@/public/imgs/Home/sobre.webp";
+import sobre from "@/public/imgs/Sobre/backgroundsobre.webp";
 
 import portal1 from "@/public/imgs/Home/portal1.webp";
 import portal2 from "@/public/imgs/Home/portal2.webp";
 import portal3 from "@/public/imgs/Home/portal3.webp";
 import portal4 from "@/public/imgs/Home/portal4.webp";
-
 
 function HomeMobile() {
   const [windowWidth, setWindowWidth] = useState(0);

@@ -4,8 +4,8 @@ import Testimonial from "./components/Testimonial";
 import Button from "@/ui/components/utils/Button";
 import CardPortal from "./components/CardPortal";
 import SwiperUnitys from "./components/SwiperUnitys";
-import video from "@/public/imgs/Home/video.webp";
-import sobre from "@/public/imgs/Home/sobre.webp";
+import video from "@/public/imgs/Sobre/carro.webp";
+import sobre from "@/public/imgs/Sobre/backgroundsobre.webp";
 import portal1 from "@/public/imgs/Home/portal1.webp";
 import portal2 from "@/public/imgs/Home/portal2.webp";
 import portal3 from "@/public/imgs/Home/portal3.webp";
@@ -36,9 +36,6 @@ function HomeDesktop() {
           </a>
         </div>
       </section>
-
-
-
 
       <section className="max-w-[1400px] justify-center min-h-[700px] w-[90%] flex items-center gap-[5%] my-10">
         <div

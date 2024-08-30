@@ -16,7 +16,7 @@ import limpeza from "../../../../public/imgs/Home/limpeza.webp";
 import jardineiro from "../../../../public/imgs/Home/jardineiro.webp";
 import manutencao from "../../../../public/imgs/Home/manutencao.webp";
 import zeladoria from "../../../../public/imgs/Home/zeladoria.webp";
-import gerente from "../../../../public/imgs/Home/gerente.webp";
+import gerente from "@/public/imgs/Sobre/backgroundsobre.webp";
 import adm from "../../../../public/imgs/Home/adm.webp";
 
 type Props = {
