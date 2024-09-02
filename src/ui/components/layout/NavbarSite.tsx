@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import logo from "@/public/imgs/logo.webp";
 import Image from "next/image";
+import Link from "next/link";
 
 function NavbarSite() {
   const [navbarBackground, setNavbarBackground] = useState(false);
@@ -42,15 +43,22 @@ function NavbarSite() {
           <Image src={logo} alt="Logo" height={50} />
         </div>
         <ul className="hidden gap-6 text-[18px] lg:flex">
-          <li className="cursor-pointer transition duration-200 hover:scale-105 hover:text-[#5271ff]">
-            Home
-          </li>
-          {/* <li className="cursor-pointer transition duration-200 hover:scale-105 hover:text-[#5271ff]">
+          <Link href="/">
+            <li className="cursor-pointer transition duration-200 hover:scale-105 hover:text-[#5271ff]">
+              Home
+            </li>
+          </Link>
+          {/* {/* <li className="cursor-pointer transition duration-200 hover:scale-105 hover:text-[#5271ff]">
             Portal
-          </li>
-          <li className="cursor-pointer transition duration-200 hover:scale-105 hover:text-[#5271ff]">
-            Sobre nós
           </li> */}
+          <Link
+            href="https://heyzine.com/flip-book/eee645426a.html"
+            target="blank"
+          >
+            <li className="cursor-pointer transition duration-200 hover:scale-105 hover:text-[#5271ff]">
+              Jornal
+            </li>
+          </Link>
           <li className="cursor-pointer transition duration-200 hover:scale-105 hover:text-[#5271ff]">
             <a
               target="ablank"
@@ -123,6 +131,14 @@ function NavbarSite() {
             <li className="border-b border-gray-400 my-8 uppercase text-black cursor-pointer transition duration-200 hover:scale-105">
               <a target="ablank" href="">Sobre nós</a>
             </li> */}
+            <li className="border-b border-gray-400 my-8 uppercase text-black cursor-pointer transition duration-200 hover:scale-105">
+              <a
+                target="ablank"
+                href="https://heyzine.com/flip-book/eee645426a.html"
+              >
+                Jornal
+              </a>
+            </li>
             <li className="border-b border-gray-400 my-8 uppercase text-black cursor-pointer transition duration-200 hover:scale-105">
               <a
                 target="ablank"
