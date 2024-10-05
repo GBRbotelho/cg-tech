@@ -52,7 +52,7 @@ function NavbarSite() {
             Portal
           </li> */}
           <Link
-            href="https://heyzine.com/flip-book/eee645426a.html"
+            href="https://heyzine.com/flip-book/f722670732.html"
             target="blank"
           >
             <li className="cursor-pointer transition duration-200 hover:scale-105 hover:text-[#5271ff]">
@@ -134,7 +134,7 @@ function NavbarSite() {
             <li className="border-b border-gray-400 my-8 uppercase text-black cursor-pointer transition duration-200 hover:scale-105">
               <a
                 target="ablank"
-                href="https://heyzine.com/flip-book/eee645426a.html"
+                href="https://heyzine.com/flip-book/f722670732.html"
               >
                 Jornal
               </a>
