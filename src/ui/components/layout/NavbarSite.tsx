@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import logo from "@/public/imgs/logo.webp";
 import Image from "next/image";
 import Link from "next/link";
+import LoginModal from "@/ui/components/modals/loginModal";
 
 function NavbarSite() {
   const [navbarBackground, setNavbarBackground] = useState(false);
+  const [modalLogin, setModalLogin] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -69,11 +71,13 @@ function NavbarSite() {
           </li>
         </ul>
         <div className="hidden gap-5 lg:flex w-[390px]">
-          <a target="ablank" href="https://app.pipefy.com/public/form/6C3h3rJb">
-            <button className="bg-[#003f88] rounded-[5px] py-2 px-5">
-              Acesso Funcionários
-            </button>
-          </a>
+          <button
+            className="bg-[#003f88] rounded-[5px] py-2 px-5"
+            onClick={() => setModalLogin(true)}
+          >
+            Acesso Funcionários
+          </button>
+
           <a
             target="ablank"
             href="https://app.pipefy.com/public/form/nVewOHRz "
@@ -170,6 +174,7 @@ function NavbarSite() {
           </ul>
         </div>
       </div>
+      {modalLogin && <LoginModal set={setModalLogin} />}
     </nav>
   );
 }
