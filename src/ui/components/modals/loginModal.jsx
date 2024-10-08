@@ -8,7 +8,7 @@ export default function LoginModal({ set }) {
           O que você quer acessar?
         </h2>
         <p className="mb-4 text-center">Selecione a opção desejada</p>
-        <div className="flex justify-center gap-4">
+        <div className="flex justify-center gap-4 flex-col items-center sm:flex-row">
           <a href="https://consultarecibo.com.br/" target="blank">
             <button className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-400">
               Acesso holerite
