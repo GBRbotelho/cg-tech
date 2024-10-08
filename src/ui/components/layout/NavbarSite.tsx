@@ -152,14 +152,12 @@ function NavbarSite() {
               </a>
             </li>
             <li className="border-b border-gray-400 my-8 uppercase text-black">
-              <a
-                target="ablank"
-                href="https://app.pipefy.com/public/form/6C3h3rJb"
+              <button
+                className="bg-[#003f88] text-white rounded-[5px] py-2 px-5"
+                onClick={() => setModalLogin(true)}
               >
-                <button className="bg-[#003f88] text-white rounded-[5px] py-2 px-5">
-                  Acesso Funcionários
-                </button>
-              </a>
+                Acesso Funcionários
+              </button>
             </li>
             <li className="border-b border-gray-400 my-8 uppercase text-black">
               <a
