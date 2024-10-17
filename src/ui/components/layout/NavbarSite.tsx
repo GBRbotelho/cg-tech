@@ -32,6 +32,7 @@ function NavbarSite() {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [prevScrollPos, visible]);
 
   return (

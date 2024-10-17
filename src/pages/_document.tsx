@@ -11,7 +11,6 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
           <link rel="shortcut icon" href="/static/favicon.ico" />
-          <title>CG-Tech Soluções completas e eficientes</title>
         </Head>
         <body>
           <Main />

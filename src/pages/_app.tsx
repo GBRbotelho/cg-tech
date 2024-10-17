@@ -7,6 +7,7 @@ import Header from "@/ui/components/layout/Header";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import NavbarSite from "@/ui/components/layout/NavbarSite";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -23,15 +24,23 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       {isDashboardRoute ? (
-        <main className="flex w-screen h-screen">
-          <Navbar />
-          <div className="w-full h-full">
-            <Header />
-            <Component {...pageProps} />
-          </div>
-        </main>
+        <>
+          <Head>
+            <title>CG-Tech Dashboard</title>
+          </Head>
+          <main className="flex w-screen h-screen">
+            <Navbar />
+            <div className="w-full h-full">
+              <Header />
+              <Component {...pageProps} />
+            </div>
+          </main>
+        </>
       ) : (
         <>
+          <Head>
+            <title>CG-Tech Soluções completas e eficientes</title>
+          </Head>
           <NavbarSite />
           <Component {...pageProps} />
         </>

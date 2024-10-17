@@ -32,6 +32,7 @@ function HomeMobile() {
     return () => {
       window.removeEventListener("resize", handleWindowResize);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
