@@ -13,17 +13,17 @@ function Navbar() {
   console.log(pathName);
 
   return (
-    <nav className="h-full w-[75px] flex flex-col justify-center text-white items-center bg-[#1B4391]">
+    <nav className="fixed h-full w-[75px] flex flex-col justify-center text-white items-center bg-[#1B4391] z-50">
       <div className="h-[95%] w-full flex flex-col justify-between items-center">
         <div>Logo</div>
         <ul className="m-0 p-0 list-none w-full flex flex-col items-center justify-center gap-[20px]">
-          <ItemMenu active={currentSegment === undefined}>
+          <ItemMenu active={currentSegment === undefined || currentSegment === "article"}>
             <Link href={"/dashboard"}>
               <Home className="w-[40px]" />
             </Link>
           </ItemMenu>
           <ItemMenu active={currentSegment === "clients"}>
-            <Link href={"/dashboard/clients"}>
+          <Link href={"/dashboard/clients"}>
               <Clientes className="w-[40px]" />
             </Link>
           </ItemMenu>
