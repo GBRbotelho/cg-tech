@@ -144,7 +144,7 @@ segurança do condomínio e do funcionário"
         className="w-full rounded-[6px] my-10 max-w-[1400px] flex flex-col justify-center items-center"
         data-aos="zoom-in-up"
       >
-        <h1 className="font-[700] text-[36px]">Ultimas Novidades do Portal</h1>
+        <h1 className="font-[700] text-[36px]">Ultimas Novidades do Jornal</h1>
         <p className="text-[24px] text-center">
           Se mantenha sempre atualizado sobre o mundo da <br /> segurança e
           facilities
@@ -152,22 +152,20 @@ segurança do condomínio e do funcionário"
         <div className="flex w-[95%] mt-14 flex-row justify-center items-center">
           <div className="w-[50%]" data-aos="zoom-in-up">
             <CardPortal
-              title="Dicas de Segurança para Condomínios"
-              text="Conselhos práticos para melhorar a segurança no seu condomínio, abrangendo desde medidas
-preventivas até ações de emergência."
-            >
-              <Image src={portal1} alt="Portal 1" />
-            </CardPortal>
+              title="Outubro 2024"
+              text="Boletim informativo aos colaboradores - informações, aniversariantes, datas importantes e muito mais. Você encontra aqui!"
+              link="https://heyzine.com/flip-book/f722670732.html"
+              img="/img/jornal/outubro.png"
+            />
             <CardPortal
-              title="Tecnologia de Segurança"
-              text="Descubra como as novas tecnologias estão transformando a segurança patrimonial, desde
-sistemas de vigilância avançados até inteligência artificial."
+              title="Setembro 2024"
+              text="Boletim informativo aos colaboradores - informações, aniversariantes, datas importantes e muito mais. Você encontra aqui!"
+              link="https://heyzine.com/flip-book/eee645426a.html"
+              img="/img/jornal/setembro.png"
               reverse={true}
-            >
-              <Image src={portal2} alt="Portal 2" />
-            </CardPortal>
+            />
           </div>
-          <div className="w-[50%]" data-aos="zoom-in-up">
+          {/* <div className="w-[50%]" data-aos="zoom-in-up">
             <CardPortal
               title="Tendências em Segurança Patrimonial"
               text="Fique por dentro das últimas novidades e inovações em segurança patrimonial, com análises
@@ -183,7 +181,7 @@ mantendo todos protegidos."
             >
               <Image src={portal4} alt="Portal 4" />
             </CardPortal>
-          </div>
+          </div> */}
         </div>
       </section>
       {/* <section className="relative max-w-[1400px] w-full flex flex-col items-center justify-center my-10">
