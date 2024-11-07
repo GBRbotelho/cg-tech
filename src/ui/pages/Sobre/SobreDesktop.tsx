@@ -59,7 +59,7 @@ function SobreDesktop() {
         <div className="flex flex-col text-[#003f88] items-center justify-start">
           <h1 className="text-center text-[50px] p-0">800+</h1>
           <p className="text-center text-[22px] font-[300] leading-6">
-            Vidas <br /> Protegidas
+            Clientes
           </p>
         </div>
         <div className="flex flex-col text-[#003f88] items-center justify-start">

@@ -39,7 +39,7 @@ function SobreMobile() {
         <div className="flex flex-col text-[#003f88] items-center justify-start">
           <h1 className="text-center text-[30px] p-0">800+</h1>
           <p className="text-center text-[15px] font-[300] leading-6">
-            Vidas <br /> Protegidas
+            Clientes
           </p>
         </div>
         <div className="flex flex-col text-[#003f88] items-center justify-start">
