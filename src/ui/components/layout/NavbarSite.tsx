@@ -46,15 +46,18 @@ function NavbarSite() {
           <Image src={logo} alt="Logo" height={50} />
         </div>
         <ul className="hidden gap-6 text-[18px] lg:flex">
-          <Link href="/">
+          <Link onClick={() => setIsNavOpen(false)} href="/">
             <li className="cursor-pointer transition duration-200 hover:scale-105 hover:text-[#5271ff]">
               Home
             </li>
           </Link>
-          {/* {/* <li className="cursor-pointer transition duration-200 hover:scale-105 hover:text-[#5271ff]">
-            Portal
-          </li> */}
+          <Link onClick={() => setIsNavOpen(false)} href="/sobre">
+            <li className="cursor-pointer transition duration-200 hover:scale-105 hover:text-[#5271ff]">
+              Sobre
+            </li>
+          </Link>
           <Link
+            onClick={() => setIsNavOpen(false)}
             href="https://heyzine.com/flip-book/f722670732.html"
             target="blank"
           >
@@ -125,17 +128,20 @@ function NavbarSite() {
             </svg>
           </div>
           <ul className="flex flex-col items-center justify-between min-h-[250px]">
-            <li className="border-b border-gray-400 my-8 uppercase text-black cursor-pointer transition duration-200 hover:scale-105">
-              <a target="ablank" href="">
-                Home
-              </a>
-            </li>
-            {/* <li className="border-b border-gray-400 my-8 uppercase text-black cursor-pointer transition duration-200 hover:scale-105">
-              <a target="ablank" href="">Portal</a>
-            </li>
-            <li className="border-b border-gray-400 my-8 uppercase text-black cursor-pointer transition duration-200 hover:scale-105">
-              <a target="ablank" href="">Sobre nós</a>
-            </li> */}
+            <Link
+              onClick={() => setIsNavOpen(false)}
+              href="/"
+              className="border-b border-gray-400 my-8 uppercase text-black cursor-pointer transition duration-200 hover:scale-105"
+            >
+              Home
+            </Link>
+            <Link
+              onClick={() => setIsNavOpen(false)}
+              href="/sobre"
+              className="border-b border-gray-400 my-8 uppercase text-black cursor-pointer transition duration-200 hover:scale-105"
+            >
+              Sobre nós
+            </Link>
             <li className="border-b border-gray-400 my-8 uppercase text-black cursor-pointer transition duration-200 hover:scale-105">
               <a
                 target="ablank"
