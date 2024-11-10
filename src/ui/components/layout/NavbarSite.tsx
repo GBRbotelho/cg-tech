@@ -3,6 +3,7 @@ import logo from "@/public/imgs/logo.webp";
 import Image from "next/image";
 import Link from "next/link";
 import LoginModal from "@/ui/components/modals/loginModal";
+import DialogLogin from "@/components/dialogs/dialog-login";
 
 function NavbarSite() {
   const [navbarBackground, setNavbarBackground] = useState(false);
@@ -74,7 +75,7 @@ function NavbarSite() {
             </a>
           </li>
         </ul>
-        <div className="hidden gap-5 lg:flex w-[390px]">
+        <div className="hidden gap-5 lg:flex  items-center w-[390px]">
           <button
             className="bg-[#003f88] rounded-[5px] py-2 px-5"
             onClick={() => setModalLogin(true)}

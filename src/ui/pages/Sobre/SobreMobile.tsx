@@ -1,9 +1,10 @@
+/* eslint-disable react/no-unescaped-entities */
+
 import React from "react";
 import Image from "next/image";
 import missao from "@/public/imgs/Home/Section1.webp";
 import visao from "@/public/imgs/Sobre/carro.webp";
 import valores from "@/public/imgs/Sobre/backgroundsobre.webp";
-import homem from "@/public/imgs/Sobre/homem.webp";
 
 function SobreMobile() {
   return (

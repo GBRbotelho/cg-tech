@@ -37,13 +37,13 @@ function MyApp({ Component, pageProps }: AppProps) {
           </main>
         </>
       ) : (
-        <>
+        <main className="w-screen relative flex flex-col">
           <Head>
             <title>CG-Tech Soluções completas e eficientes</title>
           </Head>
           <NavbarSite />
           <Component {...pageProps} />
-        </>
+        </main>
       )}
     </>
   );

@@ -36,7 +36,6 @@ function HomeDesktop() {
           </a>
         </div>
       </section>
-
       <section className="max-w-[1400px] justify-center min-h-[700px] w-[90%] flex items-center gap-[5%] my-10">
         <div
           className="w-[40%] h-full min-h-[600px] flex flex-col justify-between"
