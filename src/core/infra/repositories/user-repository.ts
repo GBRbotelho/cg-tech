@@ -7,4 +7,9 @@ export class UserRepositoryDatabase {
   async create(props: User): Promise<void> {
     await this.collection.insertOne(props.values());
   }
+
+  async emailAlreadyExists(email: string): Promise<boolean> {
+    const count = await this.collection.countDocuments({ email });
+    return count > 0;
+  }
 }
