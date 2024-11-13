@@ -33,7 +33,7 @@ export const AuthProvider: React.FC<ProviderProps> = ({ children }) => {
   const { replace, pathname } = useRouter();
 
   const saveToken = (token: string) => {
-    sessionStorage.setI1tem("accessToken", token);
+    sessionStorage.setItem("accessToken", token);
     setToken(token);
   };
 

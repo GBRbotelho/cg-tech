@@ -7,10 +7,10 @@ function Header() {
     <header className="fixed bg-[#D0D9E8] w-full h-[65px] lg:h-[47px] flex items-center justify-center z-10">
       <div className="w-[95%] h-full flex justify-between items-center">
         <h2 className="m-0 text-[25px] text-[#1B4391] pl-20 ">
-          <strong className="font-[700] text-[20px]"> Colaborador:</strong> Marcos
+          {/* <strong className="font-[700] text-[20px]"> Colaborador:</strong> */}
         </h2>
         <div className="h-full flex items-center gap-[20px]">
-          <p className="text-[#1B4391] text-[18px] font-[400]">Olá, Marcos</p>
+          {/* <p className="text-[#1B4391] text-[18px] font-[400]">Olá, </p> */}
           <span className="text-[#1B4391]">
             <Sino className="w-[25px] h-[25px]" />
           </span>

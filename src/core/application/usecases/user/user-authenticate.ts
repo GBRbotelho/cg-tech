@@ -18,11 +18,11 @@ export class AuthenticateUser {
     const user = await this.usersRepository.getByEmail(data.email);
 
     if (!user) {
-      throw { message: "Invalid username or password" };
+      throw { message: "Email ou Senha inválido" };
     }
 
     if (!this.encrypter.isValidPass(data.password, user.password)) {
-      throw { message: "Invalid username or password" };
+      throw { message: "Email ou Senha inválido" };
     }
 
     const token = this.tokenService.create({

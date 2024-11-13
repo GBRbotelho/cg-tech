@@ -9,6 +9,7 @@ import "aos/dist/aos.css";
 import NavbarSite from "@/ui/components/layout/NavbarSite";
 import Head from "next/head";
 import Providers from "@/contexts/Providers";
+import { Toaster } from "@/components/ui/sonner";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
