@@ -161,7 +161,10 @@ function NavbarSite() {
             <li className="border-b border-gray-400 my-8 uppercase text-black">
               <button
                 className="bg-[#003f88] text-white rounded-[5px] py-2 px-5"
-                onClick={() => setModalLogin(true)}
+                onClick={() => {
+                  setIsNavOpen(false);
+                  setModalLogin(true);
+                }}
               >
                 Acesso Funcionários
               </button>
