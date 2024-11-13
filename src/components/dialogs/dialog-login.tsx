@@ -12,6 +12,8 @@ import {
 } from "../ui/dialog";
 
 export default function DialogLogin() {
+  const [user, setUser] = React.useState({ email: "", password: "" });
+
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -21,7 +23,7 @@ export default function DialogLogin() {
       </DialogTrigger>
       <DialogContent className="text-black">
         <DialogHeader>Login</DialogHeader>
-        <div className="grid gap-4 py-4">
+        <form className="grid gap-4 py-4">
           <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="name" className="text-right">
               Email
@@ -42,15 +44,15 @@ export default function DialogLogin() {
               className="col-span-3"
             />
           </div>
-        </div>
-        <DialogFooter>
-          <Button
-            className="bg-[#003f88] hover:bg-opacity-90 hover:bg-[#003f88]"
-            type="submit"
-          >
-            Save changes
-          </Button>
-        </DialogFooter>
+          <DialogFooter>
+            <Button
+              className="bg-[#003f88] hover:bg-opacity-90 hover:bg-[#003f88]"
+              type="submit"
+            >
+              Save changes
+            </Button>
+          </DialogFooter>
+        </form>
       </DialogContent>
     </Dialog>
   );

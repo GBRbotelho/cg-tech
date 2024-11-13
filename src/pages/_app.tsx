@@ -8,6 +8,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import NavbarSite from "@/ui/components/layout/NavbarSite";
 import Head from "next/head";
+import Providers from "@/contexts/Providers";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -22,7 +23,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, []);
 
   return (
-    <>
+    <Providers>
       {isDashboardRoute ? (
         <>
           <Head>
@@ -45,7 +46,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <Component {...pageProps} />
         </main>
       )}
-    </>
+    </Providers>
   );
 }
 

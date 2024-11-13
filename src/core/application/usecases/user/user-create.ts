@@ -21,8 +21,7 @@ export class CreateUser {
     );
 
     if (emailAlreadyExists) {
-      return {
-        err: true,
+      throw {
         message: "E-mail already registered!",
       };
     }

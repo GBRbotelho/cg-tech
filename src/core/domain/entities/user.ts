@@ -1,5 +1,5 @@
 export class User {
-  public id: string;
+  public _id: string;
   public name: string;
   public email: string;
   public createdAt: Date = new Date();
@@ -7,7 +7,7 @@ export class User {
   public password: string;
 
   constructor(props?: User.Props) {
-    this.id = props?.id || "";
+    this._id = props?._id || "";
     this.name = props?.name || "";
     this.email = props?.email || "";
     this.createdAt = props?.createdAt ? new Date(props?.createdAt) : new Date();
@@ -24,7 +24,7 @@ export class User {
 
   values() {
     return {
-      id: this.id || "",
+      id: this._id || "",
       name: this.name || "",
       email: this.email || "",
       createdAt: this.createdAt,
@@ -36,7 +36,7 @@ export class User {
 
 export namespace User {
   export interface Props {
-    id?: string;
+    _id?: string;
     name?: string;
     email: string;
     createdAt?: Date;
