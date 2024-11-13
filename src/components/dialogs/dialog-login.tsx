@@ -35,10 +35,11 @@ export default function DialogLogin() {
     console.log(response);
     if (response.err) {
       toast.error(response.err);
+    } else {
+      toast.success("Acesso realizado com sucesso!");
+      saveToken(response.data.token);
+      replace("/dashboard");
     }
-    toast.success("Acesso realizado com sucesso!");
-    saveToken(response.data.token);
-    replace("/dashboard");
     loading.offLoading();
   };
 
