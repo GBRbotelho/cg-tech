@@ -183,12 +183,12 @@ mantendo todos protegidos."
           </div> */}
         </div>
       </section>
-      {/* <section className="relative max-w-[1400px] w-full flex flex-col items-center justify-center my-10">
+      <section className="relative max-w-[1400px] w-full flex flex-col items-center justify-center my-10">
         <h1 className="font-[700] w-[90%] text-[36px]">Nossas unidades</h1>
         <div className="relative w-[90%] my-0 flex items-center">
           <SwiperUnitys slides={4} />
         </div>
-      </section> */}
+      </section>
     </main>
   );
 }

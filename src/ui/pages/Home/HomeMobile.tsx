@@ -188,7 +188,7 @@ segurança do condomínio e do funcionário"
           </div> */}
         </div>
       </section>
-      {/* <section
+      <section
         className={`relative  w-[95%] flex flex-col items-center justify-center my-10`}
       >
         <h1 className="font-[700] w-[90%] text-[36px]">Nossas unidades</h1>
@@ -205,7 +205,7 @@ segurança do condomínio e do funcionário"
             }
           />
         </div>
-      </section> */}
+      </section>
     </main>
   );
 }

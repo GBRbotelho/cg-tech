@@ -10,6 +10,8 @@ import NavbarSite from "@/ui/components/layout/NavbarSite";
 import Head from "next/head";
 import Providers from "@/contexts/Providers";
 import { Toaster } from "@/components/ui/sonner";
+import "remixicon/fonts/remixicon.css";
+import Footer from "@/ui/components/layout/Footer";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -45,6 +47,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           </Head>
           <NavbarSite />
           <Component {...pageProps} />
+          <Footer />
         </main>
       )}
     </Providers>
