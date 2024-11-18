@@ -33,22 +33,39 @@ export default function Footer() {
       <div>
         <h3 className="font-[700] text-[11px]">Acesse nossas redes sociais:</h3>
         <ul className="text-white text-[35px] flex">
-          <li className="cursor-pointer transition duration-200 hover:scale-105">
-            <i className="ri-instagram-line"></i>
-          </li>
+          <Link href={"https://www.instagram.com/grupocgtech/"}>
+            <li className="cursor-pointer transition duration-200 hover:scale-105">
+              <i className="ri-instagram-line"></i>
+            </li>
+          </Link>
+          {/* <Link href={}></Link> */}
           <li className="cursor-pointer transition duration-200 hover:scale-105">
             <i className="ri-whatsapp-line"></i>
           </li>
-          <li className="cursor-pointer transition duration-200 hover:scale-105">
-            <i className="ri-linkedin-box-line"></i>
-          </li>
-          <li className="cursor-pointer transition duration-200 hover:scale-105">
-            <i className="ri-youtube-line"></i>
-          </li>
-          <li className="cursor-pointer transition duration-200 hover:scale-105"></li>
-          <li className="cursor-pointer transition duration-200 hover:scale-105">
-            <i className="ri-twitter-x-fill"></i>
-          </li>
+          <Link
+            href={
+              "https://www.linkedin.com/company/grupo-cgtech-security/?viewAsMember=true"
+            }
+          >
+            <li className="cursor-pointer transition duration-200 hover:scale-105">
+              <i className="ri-linkedin-box-line"></i>
+            </li>
+          </Link>
+          <Link href={"https://www.youtube.com/@grupocgtechsecurity8898"}>
+            <li className="cursor-pointer transition duration-200 hover:scale-105">
+              <i className="ri-youtube-line"></i>
+            </li>
+          </Link>
+          <Link href={"https://www.tiktok.com/@grupocgtech"}>
+            <li className="cursor-pointer transition duration-200 hover:scale-105">
+              <i className="ri-tiktok-line"></i>
+            </li>
+          </Link>
+          <Link href={"https://x.com/grupocgtech"}>
+            <li className="cursor-pointer transition duration-200 hover:scale-105">
+              <i className="ri-twitter-x-fill"></i>
+            </li>
+          </Link>
         </ul>
       </div>
     </footer>
