@@ -71,7 +71,7 @@ function NavbarSite() {
           <li className="cursor-pointer transition duration-200 hover:scale-105 hover:text-[#5271ff]">
             <a
               target="ablank"
-              href="http://srvcgt01.brazilsouth.cloudapp.azure.com/GesOperWeb/selfun.acessar.aspx"
+              href="http://179.191.96.206:8181/GesOperWeb/selfun.portal.aspx"
             >
               Trabalhe conosco
             </a>
@@ -97,7 +97,7 @@ function NavbarSite() {
         <div className="uppercase text-white cursor-pointer transition duration-200 lg:hidden hover:scale-105">
           <a
             target="ablank"
-            href="http://srvcgt01.brazilsouth.cloudapp.azure.com/GesOperWeb/selfun.acessar.aspx"
+            href="http://179.191.96.206:8181/GesOperWeb/selfun.portal.aspx"
           >
             Trabalhe conosco
           </a>
@@ -153,7 +153,7 @@ function NavbarSite() {
             <li className="border-b border-gray-400 my-8 uppercase text-black cursor-pointer transition duration-200 hover:scale-105">
               <a
                 target="ablank"
-                href="http://srvcgt01.brazilsouth.cloudapp.azure.com/GesOperWeb/selfun.acessar.aspx"
+                href="http://179.191.96.206:8181/GesOperWeb/selfun.portal.aspx"
               >
                 Trabalhe conosco
               </a>
