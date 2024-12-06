@@ -11,6 +11,7 @@ import portal2 from "@/public/imgs/Home/portal2.webp";
 import portal3 from "@/public/imgs/Home/portal3.webp";
 import portal4 from "@/public/imgs/Home/portal4.webp";
 import Image from "next/image";
+import SwiperJornal from "./components/SwiperJornal";
 
 function HomeDesktop() {
   return (
@@ -140,7 +141,7 @@ segurança do condomínio e do funcionário"
         </div>
       </section>
       <section
-        className="w-full rounded-[6px] my-10 max-w-[1400px] flex flex-col justify-center items-center"
+        className="w-full rounded-[6px] my-10 mx-10 max-w-[1400px] flex flex-col justify-center items-center"
         data-aos="zoom-in-up"
       >
         <h1 className="font-[700] text-[36px]">Ultimas Novidades do Jornal</h1>
@@ -148,8 +149,9 @@ segurança do condomínio e do funcionário"
           Se mantenha sempre atualizado sobre o mundo da <br /> segurança e
           facilities
         </p>
-        <div className="flex w-[95%] mt-14 flex-row justify-center items-center">
-          <div className="w-[50%]" data-aos="zoom-in-up">
+        <div className="flex w-[90%] mt-14 flex-row justify-center items-center">
+          <SwiperJornal slides={1} />
+          {/* <div className="w-[50%]" data-aos="zoom-in-up">
             <CardPortal
               title="Outubro 2024"
               text="Boletim informativo aos colaboradores - informações, aniversariantes, datas importantes e muito mais. Você encontra aqui!"
@@ -163,23 +165,6 @@ segurança do condomínio e do funcionário"
               img="/img/jornal/setembro.png"
               reverse={true}
             />
-          </div>
-          {/* <div className="w-[50%]" data-aos="zoom-in-up">
-            <CardPortal
-              title="Tendências em Segurança Patrimonial"
-              text="Fique por dentro das últimas novidades e inovações em segurança patrimonial, com análises
-de especialistas e previsões de mercado."
-            >
-              <Image src={portal3} alt="Portal 3" />
-            </CardPortal>
-            <CardPortal
-              title="Prevenção de Riscos"
-              text="Artigos sobre como identificar e mitigar riscos potenciais em seu condomínio ou empresa,
-mantendo todos protegidos."
-              reverse={true}
-            >
-              <Image src={portal4} alt="Portal 4" />
-            </CardPortal>
           </div> */}
         </div>
       </section>
