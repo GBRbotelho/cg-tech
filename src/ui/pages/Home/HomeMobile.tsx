@@ -12,6 +12,7 @@ import portal1 from "@/public/imgs/Home/portal1.webp";
 import portal2 from "@/public/imgs/Home/portal2.webp";
 import portal3 from "@/public/imgs/Home/portal3.webp";
 import portal4 from "@/public/imgs/Home/portal4.webp";
+import SwiperJornal from "./components/SwiperJornal";
 
 function HomeMobile() {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -113,6 +114,42 @@ function HomeMobile() {
         </div>
       </section>
 
+      <section className="w-[95%] rounded-[6px] my-10 max-w-[1400px] flex flex-col justify-center items-center">
+        <h1 className="font-[700] text-[30px]" data-aos="zoom-in-up">
+          Ultimas Novidades do Jornal
+        </h1>
+        <p className="text-[18px]" data-aos="zoom-in-up">
+          Se mantenha sempre atualizado sobre o mundo da segurança e facilities
+        </p>
+        <div className="flex w-full mt-14 flex-row justify-center items-center">
+          <SwiperJornal slides={1} />
+          {/* <div
+            className="w-full flex flex-col gap-10 max-w-[500px]"
+            data-aos="zoom-in-up"
+          >
+            <CardPortal
+              title="Outubro 2024"
+              link="https://heyzine.com/flip-book/f722670732.html"
+              img="/img/jornal/outubro.png"
+            />
+            <CardPortal
+              title="Setembro 2024"
+              reverse={true}
+              link="https://heyzine.com/flip-book/eee645426a.html"
+              img="/img/jornal/setembro.png"
+            />
+          </div> */}
+          {/* <div className="w-full max-w-[500px]" data-aos="zoom-in-up">
+            <CardPortal title="Tendências em Segurança Patrimonial" text="">
+              <Image src={portal3} alt="Portal 3" />
+            </CardPortal>
+            <CardPortal title="Prevenção de Riscos" text="" reverse={true}>
+              <Image src={portal4} alt="Portal 4" />
+            </CardPortal>
+          </div> */}
+        </div>
+      </section>
+
       <section
         className="w-[95vw] rounded-[6px] items-center gap-5 py-10 my-10 max-w-[1400px] flex flex-col gradientBackground2 justify-center"
         data-aos="zoom-in-up"
@@ -154,42 +191,10 @@ segurança do condomínio e do funcionário"
           </a>
         </div>
       </section>
-      <section className="w-[95%] rounded-[6px] my-10 max-w-[1400px] flex flex-col justify-center items-center">
-        <h1 className="font-[700] text-[30px]" data-aos="zoom-in-up">
-          Ultimas Novidades do Jornal
-        </h1>
-        <p className="text-[18px]" data-aos="zoom-in-up">
-          Se mantenha sempre atualizado sobre o mundo da segurança e facilities
-        </p>
-        <div className="flex w-[95%] mt-14 flex-col justify-center items-center">
-          <div
-            className="w-full flex flex-col gap-10 max-w-[500px]"
-            data-aos="zoom-in-up"
-          >
-            <CardPortal
-              title="Outubro 2024"
-              link="https://heyzine.com/flip-book/f722670732.html"
-              img="/img/jornal/outubro.png"
-            />
-            <CardPortal
-              title="Setembro 2024"
-              reverse={true}
-              link="https://heyzine.com/flip-book/eee645426a.html"
-              img="/img/jornal/setembro.png"
-            />
-          </div>
-          {/* <div className="w-full max-w-[500px]" data-aos="zoom-in-up">
-            <CardPortal title="Tendências em Segurança Patrimonial" text="">
-              <Image src={portal3} alt="Portal 3" />
-            </CardPortal>
-            <CardPortal title="Prevenção de Riscos" text="" reverse={true}>
-              <Image src={portal4} alt="Portal 4" />
-            </CardPortal>
-          </div> */}
-        </div>
-      </section>
+
       <section
         className={`relative  w-[95%] flex flex-col items-center justify-center my-10`}
+        data-aos="zoom-in-up"
       >
         <h1 className="font-[700] w-[90%] text-[36px]">Nossas unidades</h1>
         <div

@@ -12,40 +12,50 @@ type Props = {
 
 function SwiperJornal(props: Props) {
   const swiperRef: any = useRef();
+
   return (
-    <>
-      <div className="absolute left-[-0px]">
-        <button onClick={() => swiperRef.current?.slidePrev()}>
-          <i className="ri-arrow-left-circle-fill"></i>
-        </button>
-      </div>
-      <Swiper
-        modules={[Navigation, Pagination]}
-        spaceBetween={50}
-        slidesPerView={props.slides}
-        pagination={{ clickable: true }}
-        onSlideChange={() => console.log("slide change")}
-        onBeforeInit={(swiper: any) => {
-          swiperRef.current = swiper;
-        }}
-        watchSlidesProgress
+    <div className="relative w-full">
+      {/* Botão para ir ao slide anterior */}
+      <button
+        className="absolute top-1/2 left-0 z-10"
+        onClick={() => swiperRef.current?.slidePrev()}
       >
-        <SwiperSlide>
-          <CardJornal src="/img/sectionHome/jornal.jpeg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CardJornal src="/img/sectionHome/bolsa.jpeg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CardJornal src="/img/sectionHome/plano.jpeg" />
-        </SwiperSlide>
-      </Swiper>
-      <div className="absolute left-[101%]">
-        <button onClick={() => swiperRef.current?.slideNext()}>
-          <i className="ri-arrow-right-circle-fill"></i>
-        </button>
+        <i className="ri-arrow-left-circle-fill text-3xl"></i>
+      </button>
+
+      {/* Swiper */}
+      <div className="px-10">
+        <Swiper
+          modules={[Navigation, Pagination]}
+          spaceBetween={50}
+          slidesPerView={props.slides}
+          pagination={{ clickable: true }}
+          onSlideChange={() => console.log("slide change")}
+          onBeforeInit={(swiper: any) => {
+            swiperRef.current = swiper;
+          }}
+          watchSlidesProgress
+        >
+          <SwiperSlide>
+            <CardJornal src="/img/sectionHome/jornal.jpeg" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <CardJornal src="/img/sectionHome/bolsa.jpeg" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <CardJornal src="/img/sectionHome/plano.jpeg" />
+          </SwiperSlide>
+        </Swiper>
       </div>
-    </>
+
+      {/* Botão para ir ao próximo slide */}
+      <button
+        className="absolute top-1/2 right-0 z-10"
+        onClick={() => swiperRef.current?.slideNext()}
+      >
+        <i className="ri-arrow-right-circle-fill text-3xl"></i>
+      </button>
+    </div>
   );
 }
 

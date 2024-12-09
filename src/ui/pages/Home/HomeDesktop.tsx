@@ -98,6 +98,35 @@ function HomeDesktop() {
       </section>
 
       <section
+        className="w-full rounded-[6px] my-10 mx-10 max-w-[1400px] flex flex-col justify-center items-center"
+        data-aos="zoom-in-up"
+      >
+        <h1 className="font-[700] text-[36px]">Ultimas Novidades do Jornal</h1>
+        <p className="text-[24px] text-center">
+          Se mantenha sempre atualizado sobre o mundo da <br /> segurança e
+          facilities
+        </p>
+        <div className="flex w-[90%] mt-14 flex-row justify-center items-center">
+          <SwiperJornal slides={1} />
+          {/* <div className="w-[50%]" data-aos="zoom-in-up">
+            <CardPortal
+              title="Outubro 2024"
+              text="Boletim informativo aos colaboradores - informações, aniversariantes, datas importantes e muito mais. Você encontra aqui!"
+              link="https://heyzine.com/flip-book/f722670732.html"
+              img="/img/jornal/outubro.png"
+            />
+            <CardPortal
+              title="Setembro 2024"
+              text="Boletim informativo aos colaboradores - informações, aniversariantes, datas importantes e muito mais. Você encontra aqui!"
+              link="https://heyzine.com/flip-book/eee645426a.html"
+              img="/img/jornal/setembro.png"
+              reverse={true}
+            />
+          </div> */}
+        </div>
+      </section>
+
+      <section
         className="w-[95vw] rounded-[6px] py-10 my-10 max-w-[1400px] flex flex-col gradientBackground2 justify-center"
         data-aos="zoom-in-up"
       >
@@ -140,35 +169,11 @@ segurança do condomínio e do funcionário"
           </a>
         </div>
       </section>
+
       <section
-        className="w-full rounded-[6px] my-10 mx-10 max-w-[1400px] flex flex-col justify-center items-center"
+        className="relative max-w-[1400px] w-full flex flex-col items-center justify-center my-10"
         data-aos="zoom-in-up"
       >
-        <h1 className="font-[700] text-[36px]">Ultimas Novidades do Jornal</h1>
-        <p className="text-[24px] text-center">
-          Se mantenha sempre atualizado sobre o mundo da <br /> segurança e
-          facilities
-        </p>
-        <div className="flex w-[90%] mt-14 flex-row justify-center items-center">
-          <SwiperJornal slides={1} />
-          {/* <div className="w-[50%]" data-aos="zoom-in-up">
-            <CardPortal
-              title="Outubro 2024"
-              text="Boletim informativo aos colaboradores - informações, aniversariantes, datas importantes e muito mais. Você encontra aqui!"
-              link="https://heyzine.com/flip-book/f722670732.html"
-              img="/img/jornal/outubro.png"
-            />
-            <CardPortal
-              title="Setembro 2024"
-              text="Boletim informativo aos colaboradores - informações, aniversariantes, datas importantes e muito mais. Você encontra aqui!"
-              link="https://heyzine.com/flip-book/eee645426a.html"
-              img="/img/jornal/setembro.png"
-              reverse={true}
-            />
-          </div> */}
-        </div>
-      </section>
-      <section className="relative max-w-[1400px] w-full flex flex-col items-center justify-center my-10">
         <h1 className="font-[700] w-[90%] text-[36px]">Nossas unidades</h1>
         <div className="relative w-[90%] my-0 flex items-center">
           <SwiperUnitys slides={4} />
