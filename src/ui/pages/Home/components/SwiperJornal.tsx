@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import CardJornal from "./CardJornal";
+import Link from "next/link";
 
 type Props = {
   slides: number;
@@ -37,10 +38,16 @@ function SwiperJornal(props: Props) {
           watchSlidesProgress
         >
           <SwiperSlide>
-            <CardJornal src="/img/sectionHome/jornal.jpeg" />
+            <Link href={"https://heyzine.com/flip-book/7761ca8eb5.html"}>
+              <CardJornal src="/img/sectionHome/jornal.jpeg" />
+            </Link>
           </SwiperSlide>
           <SwiperSlide>
-            <CardJornal src="/img/sectionHome/bolsa.jpeg" />
+            <Link
+              href={"http://179.191.96.206:8181/GesOperWeb/selfun.portal.aspx"}
+            >
+              <CardJornal src="/img/sectionHome/bolsa.jpeg" />
+            </Link>
           </SwiperSlide>
           <SwiperSlide>
             <CardJornal src="/img/sectionHome/plano.jpeg" />
