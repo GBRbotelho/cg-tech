@@ -38,13 +38,17 @@ function SwiperJornal(props: Props) {
           watchSlidesProgress
         >
           <SwiperSlide>
-            <Link href={"https://heyzine.com/flip-book/7761ca8eb5.html"}>
+            <Link
+              href={"https://heyzine.com/flip-book/7761ca8eb5.html"}
+              target="_blank"
+            >
               <CardJornal src="/img/sectionHome/jornal.jpeg" />
             </Link>
           </SwiperSlide>
           <SwiperSlide>
             <Link
               href={"http://179.191.96.206:8181/GesOperWeb/selfun.portal.aspx"}
+              target="_blank"
             >
               <CardJornal src="/img/sectionHome/bolsa.jpeg" />
             </Link>
