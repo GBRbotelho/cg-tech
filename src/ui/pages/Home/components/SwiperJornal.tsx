@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -6,6 +6,14 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import CardJornal from "./CardJornal";
 import Link from "next/link";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 type Props = {
   slides: number;
@@ -13,6 +21,7 @@ type Props = {
 
 function SwiperJornal(props: Props) {
   const swiperRef: any = useRef();
+  const [openModal, setOpenModal] = useState(false);
 
   return (
     <div className="relative w-full">
@@ -44,7 +53,30 @@ function SwiperJornal(props: Props) {
             </Link>
           </SwiperSlide>
           <SwiperSlide>
-            <CardJornal src="/img/sectionHome/bolsa.jpeg" />
+            <CardJornal
+              onClick={() => setOpenModal(true)}
+              src="/img/sectionHome/bolsa.jpeg"
+            />
+            <Dialog open={openModal} onOpenChange={setOpenModal}>
+              <DialogContent>
+                <DialogHeader>
+                  <DialogTitle>Informações sobre o Convênio</DialogTitle>
+                  <DialogDescription>
+                    <ul className="mt-3 flex flex-col gap-3">
+                      <li>
+                        O Convênio não gera qualquer desconto no holerite e o
+                        convenio se estende aos cônjuge e dependentes.
+                      </li>
+                      <li>
+                        Os colaboradores deverão procurar uma unidade mais
+                        próxima ou polo parceiro, juntamente com holerite para
+                        comprovar que trabalha na CGTECH.
+                      </li>
+                    </ul>
+                  </DialogDescription>
+                </DialogHeader>
+              </DialogContent>
+            </Dialog>
           </SwiperSlide>
           <SwiperSlide>
             <Link
