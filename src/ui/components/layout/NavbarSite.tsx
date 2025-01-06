@@ -12,7 +12,8 @@ function NavbarSite() {
   const [visible, setVisible] = useState(true);
   const [isNavOpen, setIsNavOpen] = useState(false);
 
-  const linkJornal = "https://heyzine.com/flip-book/745e2bb4b7.html";
+  const linkJornal =
+    "https://drive.google.com/file/d/1i9YXX27LL0TEWkSne6_G0qpUhs6sW3rQ/view?usp=sharing";
 
   const handleScroll = () => {
     const position = window.scrollY;

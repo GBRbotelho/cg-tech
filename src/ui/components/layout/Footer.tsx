@@ -16,7 +16,11 @@ export default function Footer() {
       <div className="flex flex-col">
         <h3 className="font-[700] text-[13px]">Links importantes:</h3>
         <ul className="flex flex-col text-[13px]">
-          <Link href={"https://heyzine.com/flip-book/7761ca8eb5.html"}>
+          <Link
+            href={
+              "https://drive.google.com/file/d/1i9YXX27LL0TEWkSne6_G0qpUhs6sW3rQ/view?usp=sharing"
+            }
+          >
             <li className="cursor-pointer">Jornal</li>
           </Link>
           <Link href={"/sobre"}>
