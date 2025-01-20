@@ -46,7 +46,9 @@ function SwiperJornal(props: Props) {
         >
           <SwiperSlide>
             <Link
-              href={"https://heyzine.com/flip-book/745e2bb4b7.html"}
+              href={
+                "https://drive.google.com/file/d/1i9YXX27LL0TEWkSne6_G0qpUhs6sW3rQ/view?usp=sharing"
+              }
               target="_blank"
             >
               <CardJornal src="/img/sectionHome/jornal.jpeg" />
