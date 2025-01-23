@@ -11,7 +11,7 @@ function SobreMobile() {
     <main className="bg-[#f0f7ff] flex flex-col items-center w-screen lg:hidden">
       <section className="relative top-[-20px] w-screen bgSobre text-center text-white m-0 bg-cover py-[100px] bg-center items-center justify-center flex">
         <div className="absolute w-full h-full max-h-full bg-black bg-opacity-60 top-[0px] left-0 py-[100px] z-10"></div>
-        <div className="flex items-center flex-col gap-10 z-20">
+        <div className="flex items-center flex-col gap-10 z-20 bg-white p-5">
           <h1 className="font-[800] leading-[55px] m-0 p-0 text-[35px]">
             Sobre a CGTECH
           </h1>
@@ -80,10 +80,10 @@ function SobreMobile() {
           <div className="flex flex-col text-[#003f88] items-center px-10">
             <h1 className="font-[800] text-[40px]">Missão</h1>
             <p className="text-[16px]">
-              Há mais de 20 anos sendo referência no mercado de prestação de
-              serviços para condomínios residenciais e empresariais, com mais de
-              300 condomínios atendidos por suas 5 sedes localizadas nas cidades
-              de São José dos Campos, Campinas, São Paulo, Indaiatuba e Jundiaí.
+              Proporcionar aos nossos clientes um serviço diferenciado na área
+              de segurança patrimonial e facílities, agregando tecnologia de
+              ponta e gerando aos nossos clientes atendimento de alta qualidade
+              e satisfação nos serviços realizados.
             </p>
           </div>
           <div className="w-full bg-[#003f88] h-full sm:w-full">
@@ -103,24 +103,31 @@ function SobreMobile() {
             />
           </div>
           <div className="flex flex-col items-center text-[#ffffff] px-10">
-            <h1 className="font-[800] text-[40px]">Missão</h1>
+            <h1 className="font-[800] text-[40px]">Visão</h1>
             <p className="text-[16px]">
-              Há mais de 20 anos sendo referência no mercado de prestação de
-              serviços para condomínios residenciais e empresariais, com mais de
-              300 condomínios atendidos por suas 5 sedes localizadas nas cidades
-              de São José dos Campos, Campinas, São Paulo, Indaiatuba e Jundiaí.
+              “Ser reconhecida no mercado como uma as maiores e melhores empresa
+              no ramo de segurança e faciliteis, no âmbito nacional e
+              internacional. Com soluções inovadoras e de tecnologia avançada,
+              através da estruturação de nossos processos internos e trabalho em
+              equipe, destacando-se pela capacitação constante dos nossos
+              colaboradores. Garantindo a melhor relação custo/benefício e a
+              satisfação dos nossos clientes e parceiros.""
             </p>
           </div>
         </div>
         <div className="bg-white flex flex-col-reverse w-full max-w-[95%] items-center justify-between">
           <div className="flex flex-col text-[#003f88] items-center px-10">
-            <h1 className="font-[800] text-[40px]">Missão</h1>
-            <p className="text-[16px]">
-              Há mais de 20 anos sendo referência no mercado de prestação de
-              serviços para condomínios residenciais e empresariais, com mais de
-              300 condomínios atendidos por suas 5 sedes localizadas nas cidades
-              de São José dos Campos, Campinas, São Paulo, Indaiatuba e Jundiaí.
-            </p>
+            <h1 className="font-[800] text-[40px]">Valores</h1>
+            <ul className="text-[16px] flex flex-wrap gap-2 xl:text-[16px]">
+              <li>Ética,</li>
+              <li>Transparência,</li>
+              <li>Prudência,</li>
+              <li>Lealdade,</li>
+              <li>Acolhimento,</li>
+              <li>Competência,</li>
+              <li>Responsabilidade Social e Meio Ambiente</li>
+              <li>e Inovação.</li>
+            </ul>
           </div>
           <div className="w-full bg-[#003f88] h-full sm:w-full">
             <Image

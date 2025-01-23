@@ -52,7 +52,7 @@ function NavbarSite() {
         <ul className="hidden gap-6 text-[18px] lg:flex">
           <Link onClick={() => setIsNavOpen(false)} href="/">
             <li className="cursor-pointer transition duration-200 hover:scale-105 hover:text-[#5271ff]">
-              Home
+              Inicio
             </li>
           </Link>
           <Link onClick={() => setIsNavOpen(false)} href="/sobre">
@@ -137,7 +137,7 @@ function NavbarSite() {
               href="/"
               className="border-b border-gray-400 my-8 uppercase text-black cursor-pointer transition duration-200 hover:scale-105"
             >
-              Home
+              Inicio
             </Link>
             <Link
               onClick={() => setIsNavOpen(false)}

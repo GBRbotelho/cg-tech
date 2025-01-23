@@ -69,7 +69,7 @@ function SobreDesktop() {
           </p>
         </div>
       </section>
-      <section className="flex flex-col w-[80%] my-5 max-w-[1400px] text-[#003f88] justify-around">
+      <section className="flex flex-col w-[80%] my-5 max-w-[1400px] text-[#003f88] bg-white p-5 justify-around">
         <h1 className="font-[800] text-[40px]">Um pouco da nossa historia</h1>
         <p className="text-[18px]">
           A CGTECH tem sido um pilar de segurança e confiança no mercado de
@@ -136,15 +136,15 @@ function SobreDesktop() {
         <div className="bg-white h-[200px] flex items-start justify-between">
           <div className="flex flex-col text-[#003f88] px-10">
             <h1 className="font-[800] text-[40px]">Valores</h1>
-            <ul className="text-[16px] justify-center text-center flex flex-wrap gap-5 xl:text-[22px]">
-              <li>• Ética</li>
-              <li>• Transparência</li>
-              <li>• Prudência</li>
-              <li>• Lealdade</li>
-              <li>• Acolhimento</li>
-              <li>• Competência</li>
-              <li>• Responsabilidade Social e Meio Ambiente</li>
-              <li>• Inovação</li>
+            <ul className="text-[16px] flex flex-wrap gap-2 xl:text-[16px]">
+              <li>Ética,</li>
+              <li>Transparência,</li>
+              <li>Prudência,</li>
+              <li>Lealdade,</li>
+              <li>Acolhimento,</li>
+              <li>Competência,</li>
+              <li>Responsabilidade Social e Meio Ambiente</li>
+              <li>e Inovação.</li>
             </ul>
           </div>
           <div className="w-[300px] min-w-[300px] bg-[#003f88] h-full">
@@ -195,7 +195,7 @@ function SobreDesktop() {
         </div>
       </section>
       <section className="flex w-full mb-[-40px] items-center justify-between">
-        <div className="w-full py-5 flex flex-col justify-center items-center gap-2 bg-[#003f88]">
+        <div className="w-full py-5 flex flex-col justify-center items-center gap-2 pb-10 bg-[#003f88]">
           <h1 className="text-[23px] text-white font-[900] text-center">
             Quer ser um cliente <br /> CGTECH?
           </h1>
@@ -203,7 +203,7 @@ function SobreDesktop() {
             Solicitar Orçamento
           </button>
         </div>
-        <div className="w-full py-5 flex flex-col justify-center items-center gap-2 bg-white">
+        <div className="w-full py-5 flex flex-col justify-center items-center gap-2 pb-10 bg-white">
           <h1 className="text-[23px] text-[#003f88] font-[900] text-center">
             Quer ser um colaborador <br /> CGTECH?
           </h1>
