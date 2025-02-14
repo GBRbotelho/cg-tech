@@ -23,9 +23,17 @@ function TableUser() {
     fetchUsers();
   }, []);
 
-  useEffect(() => {
-    console.log(selecteds);
-  }, [selecteds]);
+  const handleDeleteSelected = async () => {
+    if (selecteds.length === 0) return;
+
+    try {
+      await Promise.all(selecteds.map((id) => UserGateway.delete(id)));
+      setSelecteds([]);
+      fetchUsers();
+    } catch (error) {
+      console.error("Erro ao excluir usuários:", error);
+    }
+  };
 
   return (
     <section className="w-full">
@@ -53,7 +61,7 @@ function TableUser() {
             className:
               "border-red-500 bg-transparent text-red-500 hover:text-red-500",
             withConfirmation: true,
-            action() {},
+            action: handleDeleteSelected,
           },
           {
             action() {

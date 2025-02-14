@@ -24,6 +24,16 @@ export class UserRepositoryDatabase {
     return UserAdapter.create(userProps);
   }
 
+  async getById(userId: string) {
+    const userProps = await this.collection.findOne({
+      _id: new ObjectId(userId),
+    });
+    if (!userProps) {
+      return null;
+    }
+    return UserAdapter.create(userProps);
+  }
+
   async search(input?: string) {
     const query =
       input !== "" ? { name: { $regex: input, $options: "i" } } : {};
@@ -37,5 +47,16 @@ export class UserRepositoryDatabase {
       { _id: new ObjectId(userId) },
       { $set: updateData }
     );
+  }
+
+  async updatePassword(userId: string, newPassword: string): Promise<void> {
+    await this.collection.updateOne(
+      { _id: new ObjectId(userId) },
+      { $set: { password: newPassword } }
+    );
+  }
+
+  async delete(userId: string): Promise<void> {
+    await this.collection.deleteOne({ _id: new ObjectId(userId) });
   }
 }

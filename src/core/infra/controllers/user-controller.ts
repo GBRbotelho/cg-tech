@@ -14,6 +14,18 @@ export class UserController {
     return await UserFactory.search(body);
   }
 
+  static async delete(params: any, body: string) {
+    return await UserFactory.delete(params.id);
+  }
+
+  static async password(params: any, body: string) {
+    return await UserFactory.password(params.id, body);
+  }
+
+  static async verify(params: any, body: string, token: string) {
+    return await UserFactory.verify(token);
+  }
+
   static async authenticate(
     params: any,
     body: { email: string; password: string }

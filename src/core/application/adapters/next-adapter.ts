@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
 type Method = "GET" | "POST" | "PUT" | "DELETE";
-type Controller = (params: any, body: any) => Promise<any>;
+type Controller = (params: any, body: any, token?: string) => Promise<any>;
 
 export class NextjsAPIAdapter {
   private controllers: Map<Method, Controller> = new Map();
@@ -15,7 +15,14 @@ export class NextjsAPIAdapter {
         if (!controller) {
           return res.status(405).end();
         }
-        const response = await controller(req.query, req.body);
+
+        // Pegar o token do cabeçalho Authorization (Bearer Token)
+        const authHeader = req.headers.authorization;
+        const token = authHeader?.split(" ")[1]; // Remover "Bearer "
+
+        // Chamar o controlador passando também o token
+        const response = await controller(req.query, req.body, token);
+
         if (response?.err) {
           return res.status(400).json({ err: response?.err });
         }

@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { User } from "@/core/domain/entities/user";
+import { UserGateway } from "@/core/infra/gateways/user-gateway";
 import { useRouter } from "next/router";
 import {
   ReactNode,
@@ -32,23 +33,42 @@ export const AuthProvider: React.FC<ProviderProps> = ({ children }) => {
   const [token, setToken] = useState<string | null>(null);
   const { replace, pathname } = useRouter();
 
-  const saveToken = (token: string) => {
+  const saveToken = async (token: string) => {
     sessionStorage.setItem("accessToken", token);
     setToken(token);
+    verify(token);
   };
 
   const logout = () => {
     sessionStorage.removeItem("accessToken");
     setToken(null);
     setUser(null);
+    replace("/");
   };
 
-  const verify = async (token: string) => {};
+  const verify = async (token: string) => {
+    try {
+      const response = await UserGateway.verify(token);
+      if (response.data) {
+        setUser(response.data.data); // Salva o usuário no estado
+      } else {
+        logout();
+      }
+    } catch (error) {
+      setUser(null); // Caso haja erro na verificação do token, o usuário é removido
+      replace("/");
+    }
+  };
 
   useEffect(() => {
     const getTokenSession = sessionStorage.getItem("accessToken");
+
     if (getTokenSession) {
-      verify(getTokenSession);
+      saveToken(getTokenSession);
+    } else {
+      if (pathname.startsWith("/dashboard")) {
+        replace("/");
+      }
     }
   }, []);
 

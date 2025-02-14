@@ -4,7 +4,6 @@ import { UserController } from "@/core/infra/controllers/user-controller";
 const adapter = new NextjsAPIAdapter();
 
 export default adapter.create(
-  ["POST", UserController.create],
-  ["PUT", UserController.update],
-  ["DELETE", UserController.delete]
+  ["DELETE", UserController.delete],
+  ["PUT", UserController.password]
 );

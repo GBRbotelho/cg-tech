@@ -22,4 +22,12 @@ export class TokenService {
       return false;
     }
   }
+
+  decode<T = any>(token: string): T | null {
+    try {
+      return jwt.decode(token) as T;
+    } catch (err) {
+      return null;
+    }
+  }
 }

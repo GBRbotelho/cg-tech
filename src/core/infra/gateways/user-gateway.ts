@@ -1,7 +1,6 @@
 import { User } from "@/core/domain/entities/user";
 import axios from "axios";
 import { toast } from "sonner";
-
 export class UserGateway {
   //   static async verify(data: { token: string }) {
   //     try {
@@ -44,6 +43,38 @@ export class UserGateway {
   static async update(user: any) {
     try {
       return await axios.put("/api/user", user);
+    } catch (err: any) {
+      const error = err?.response?.data || err?.data;
+      toast.error(error);
+      return error;
+    }
+  }
+
+  static async delete(user: any) {
+    try {
+      return await axios.delete("/api/user/" + user);
+    } catch (err: any) {
+      const error = err?.response?.data || err?.data;
+      toast.error(error);
+      return error;
+    }
+  }
+
+  static async password(id: string, password: string) {
+    try {
+      return await axios.put("/api/user/" + id, password);
+    } catch (err: any) {
+      const error = err?.response?.data || err?.data;
+      toast.error(error);
+      return error;
+    }
+  }
+
+  static async verify(token: string) {
+    try {
+      return await axios.get("/api/user/login", {
+        headers: { Authorization: token ? `Bearer ${token}` : "" },
+      });
     } catch (err: any) {
       const error = err?.response?.data || err?.data;
       toast.error(error);

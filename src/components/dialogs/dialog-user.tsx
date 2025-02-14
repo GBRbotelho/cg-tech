@@ -21,6 +21,7 @@ import { toast } from "sonner";
 import { useLoading } from "@/contexts/LoadingContext";
 import { useAuth } from "@/contexts/AuthContext";
 import { useRouter } from "next/router";
+import DialogPassword from "./dialog-password";
 
 type Props = {
   reload: () => void;
@@ -87,6 +88,16 @@ export default function DialogUser(props: Props) {
       props.reload();
       toast.success("Usuário atuzalido com sucesso!");
     } else {
+      if (
+        !userData.email ||
+        !userData.name ||
+        !userData.password ||
+        !userData.nivel
+      ) {
+        toast.error("Preencha todos os campos!");
+        loading.offLoading();
+        return;
+      }
       const data = {
         ...userData,
         nivel: Number(userData.nivel),
@@ -171,6 +182,7 @@ export default function DialogUser(props: Props) {
             </Select>
           </div>
           <DialogFooter>
+            <DialogPassword id={userData._id} reload={props.reload} />
             <Button
               className="bg-green-600 hover:bg-opacity-90 hover:bg-green-600/90"
               type="submit"

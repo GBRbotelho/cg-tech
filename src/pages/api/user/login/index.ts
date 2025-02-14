@@ -3,4 +3,7 @@ import { UserController } from "@/core/infra/controllers/user-controller";
 
 const adapter = new NextjsAPIAdapter();
 
-export default adapter.create(["POST", UserController.authenticate]);
+export default adapter.create(
+  ["POST", UserController.authenticate],
+  ["GET", UserController.verify]
+);

@@ -10,6 +10,9 @@ import { TokenService } from "../security/Token";
 import user from "@/pages/api/user";
 import { SearchUser } from "@/core/application/usecases/user/user-search";
 import { EditUser } from "@/core/application/usecases/user/user-edit";
+import { DeleteUser } from "@/core/application/usecases/user/user-delete";
+import { UpdatePassword } from "@/core/application/usecases/user/user-password";
+import { UserVerify } from "@/core/application/usecases/user/user-verify";
 
 export const UserFactory = {
   create: async (user: User.Props) => {
@@ -43,5 +46,28 @@ export const UserFactory = {
       email: input.email,
       nivel: input.nivel,
     });
+  },
+
+  delete: async (input: any) => {
+    const edit = new DeleteUser(new UserRepositoryDatabase());
+    return await edit.execute(input);
+  },
+
+  password: async (userId: string, password: any) => {
+    const updatePassword = new UpdatePassword(
+      new UserRepositoryDatabase(),
+      new BcryptEncripter()
+    );
+
+    return await updatePassword.execute(userId, password);
+  },
+
+  verify: async (token: string) => {
+    const updatePassword = new UserVerify(
+      new UserRepositoryDatabase(),
+      new TokenService()
+    );
+
+    return await updatePassword.execute(token);
   },
 };
