@@ -9,6 +9,7 @@ import { BcryptEncripter } from "../security/Bcrypt";
 import { TokenService } from "../security/Token";
 import user from "@/pages/api/user";
 import { SearchUser } from "@/core/application/usecases/user/user-search";
+import { EditUser } from "@/core/application/usecases/user/user-edit";
 
 export const UserFactory = {
   create: async (user: User.Props) => {
@@ -30,8 +31,17 @@ export const UserFactory = {
     return await authenticate.execute(user);
   },
 
-  search: async (input: string) => {
+  search: async (input: any) => {
     const search = new SearchUser(new UserRepositoryDatabase());
     return await search.execute(input);
+  },
+
+  update: async (input: any) => {
+    const edit = new EditUser(new UserRepositoryDatabase());
+    return await edit.execute(input._id, {
+      name: input.name,
+      email: input.email,
+      nivel: input.nivel,
+    });
   },
 };

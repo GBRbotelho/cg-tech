@@ -9,6 +9,7 @@ export class CreateUser {
   ) {}
 
   async execute(input: User.Props) {
+    console.log(input);
     if (!input.email) {
       return {
         err: true,
@@ -33,6 +34,8 @@ export class CreateUser {
       nivel: input.nivel || 1,
     });
 
-    await this.usersRepository.create(user);
+    const data = await this.usersRepository.create(user);
+
+    return { success: true, message: "Usuário criado com sucesso!", data };
   }
 }

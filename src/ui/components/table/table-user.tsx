@@ -9,6 +9,8 @@ import DialogUser from "@/components/dialogs/dialog-user";
 
 function TableUser() {
   const [search, setSearch] = React.useState<string>("");
+  const [openModal, setOpenModal] = React.useState<boolean>(false);
+  const [editData, setEditData] = React.useState<any>(null);
   const [selecteds, setSelecteds] = React.useState<number[]>([]);
   const [users, setUsers] = React.useState<any[]>([]);
 
@@ -21,6 +23,10 @@ function TableUser() {
     fetchUsers();
   }, []);
 
+  useEffect(() => {
+    console.log(selecteds);
+  }, [selecteds]);
+
   return (
     <section className="w-full">
       <div className="flex gap-3 my-2">
@@ -30,7 +36,13 @@ function TableUser() {
           placeholder="Buscar por usuário"
           onSearch={() => fetchUsers()}
         />
-        <DialogUser />
+        <DialogUser
+          open={openModal}
+          data={editData}
+          setData={setEditData}
+          setOpen={setOpenModal}
+          reload={fetchUsers}
+        />
       </div>
       <ActionsTable
         hidden={selecteds.length <= 0}
@@ -44,7 +56,10 @@ function TableUser() {
             action() {},
           },
           {
-            action() {},
+            action() {
+              setEditData(users.find((user) => user._id === selecteds[0]));
+              setOpenModal(true);
+            },
             text: "Editar usuário",
             className: cn(
               `border-emerald-500 bg-transparent text-emerald-500 hover:text-emerald-500`,

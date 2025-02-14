@@ -1,3 +1,4 @@
+import { User } from "@/core/domain/entities/user";
 import axios from "axios";
 import { toast } from "sonner";
 
@@ -30,12 +31,23 @@ export class UserGateway {
     }
   }
 
-  //   static async create(user: { email: string; password: string }) {
-  //     try {
-  //       return await axios.post("/api/v1/users", user);
-  //     } catch (err: any) {
-  //       const error = err?.response?.data || err?.data;
-  //       toast.error(error);
-  //     }
-  //   }
+  static async create(user: User.Props) {
+    try {
+      return await axios.post("/api/user", user);
+    } catch (err: any) {
+      const error = err?.response?.data || err?.data;
+      toast.error(error);
+      return error;
+    }
+  }
+
+  static async update(user: any) {
+    try {
+      return await axios.put("/api/user", user);
+    } catch (err: any) {
+      const error = err?.response?.data || err?.data;
+      toast.error(error);
+      return error;
+    }
+  }
 }

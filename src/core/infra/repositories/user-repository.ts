@@ -1,6 +1,7 @@
 import { UserAdapter } from "@/core/application/adapters/user-adapter";
 import { User } from "@/core/domain/entities/user";
 import { connection } from "@/core/infra/databases/mongodb";
+import { ObjectId } from "mongodb";
 
 export class UserRepositoryDatabase {
   private collection = connection.collection<User.Props>("users");
@@ -29,5 +30,12 @@ export class UserRepositoryDatabase {
 
     const usersProps = await this.collection.find(query).toArray();
     return usersProps;
+  }
+
+  async update(userId: string, updateData: Partial<User.Props>) {
+    return await this.collection.updateOne(
+      { _id: new ObjectId(userId) },
+      { $set: updateData }
+    );
   }
 }

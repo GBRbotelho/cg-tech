@@ -6,6 +6,10 @@ export class UserController {
     return await UserFactory.create(body);
   }
 
+  static async update(params: any, body: User.Props) {
+    return await UserFactory.update(body);
+  }
+
   static async search(params: any, body: string) {
     return await UserFactory.search(body);
   }

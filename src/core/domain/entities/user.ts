@@ -3,7 +3,7 @@ export class User {
   public name: string;
   public email: string;
   public createdAt: Date = new Date();
-  public nivel: number = 0;
+  public nivel: number = 1;
   public password: string;
 
   constructor(props?: User.Props) {
@@ -11,6 +11,7 @@ export class User {
     this.name = props?.name || "";
     this.email = props?.email || "";
     this.createdAt = props?.createdAt ? new Date(props?.createdAt) : new Date();
+    this.nivel = props?.nivel || 1;
     this.password = props?.password || "";
   }
 
@@ -24,7 +25,6 @@ export class User {
 
   values() {
     return {
-      id: this._id || "",
       name: this.name || "",
       email: this.email || "",
       createdAt: this.createdAt,
