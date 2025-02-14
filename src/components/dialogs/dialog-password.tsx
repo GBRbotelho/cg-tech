@@ -43,6 +43,18 @@ export default function DialogPassword(props: Props) {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     loading.onLoading();
+    if (!password.password) {
+      toast.error("Preencha a senha!");
+      loading.offLoading();
+      return;
+    }
+
+    if (password.password !== password.passwordConfirm) {
+      toast.error("As senhas devem ser iguais!");
+      loading.offLoading();
+      return;
+    }
+
     const response = await UserGateway.password(props.id, password);
     if (response.err) {
       toast.error(response.err);
@@ -51,6 +63,7 @@ export default function DialogPassword(props: Props) {
       props.reload();
     }
     loading.offLoading();
+    setPassword({ password: "", passwordConfirm: "" });
     setOpen(false);
   };
 
@@ -78,6 +91,20 @@ export default function DialogPassword(props: Props) {
               autoComplete="off"
               className="col-span-3"
               value={password.password}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="grid grid-cols-4 items-center gap-4">
+            <Label htmlFor="password" className="text-right">
+              Confirmação de Senha
+            </Label>
+            <Input
+              id="passwordConfirm"
+              placeholder="**********"
+              type="password"
+              autoComplete="off"
+              className="col-span-3"
+              value={password.passwordConfirm}
               onChange={handleChange}
             />
           </div>
