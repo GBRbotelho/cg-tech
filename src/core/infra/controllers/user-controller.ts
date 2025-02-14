@@ -22,8 +22,8 @@ export class UserController {
     return await UserFactory.password(params.id, body);
   }
 
-  static async verify(params: any, body: string, token: string) {
-    return await UserFactory.verify(token);
+  static async verify(params: any, body: string, token?: string) {
+    return await UserFactory.verify(token || "");
   }
 
   static async authenticate(

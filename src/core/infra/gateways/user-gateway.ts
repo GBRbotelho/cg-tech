@@ -60,7 +60,7 @@ export class UserGateway {
     }
   }
 
-  static async password(id: string, password: string) {
+  static async password(id: string, password: any) {
     try {
       return await axios.put("/api/user/" + id, password);
     } catch (err: any) {

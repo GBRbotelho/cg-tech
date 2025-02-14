@@ -26,7 +26,7 @@ export class UserRepositoryDatabase {
 
   async getById(userId: string) {
     const userProps = await this.collection.findOne({
-      _id: new ObjectId(userId),
+      _id: new ObjectId(userId) as unknown as string,
     });
     if (!userProps) {
       return null;
@@ -44,19 +44,21 @@ export class UserRepositoryDatabase {
 
   async update(userId: string, updateData: Partial<User.Props>) {
     return await this.collection.updateOne(
-      { _id: new ObjectId(userId) },
+      { _id: new ObjectId(userId) as unknown as string },
       { $set: updateData }
     );
   }
 
   async updatePassword(userId: string, newPassword: string): Promise<void> {
     await this.collection.updateOne(
-      { _id: new ObjectId(userId) },
+      { _id: new ObjectId(userId) as unknown as string },
       { $set: { password: newPassword } }
     );
   }
 
   async delete(userId: string): Promise<void> {
-    await this.collection.deleteOne({ _id: new ObjectId(userId) });
+    await this.collection.deleteOne({
+      _id: new ObjectId(userId) as unknown as string,
+    });
   }
 }
