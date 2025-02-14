@@ -6,6 +6,10 @@ export class UserController {
     return await UserFactory.create(body);
   }
 
+  static async search(params: any, body: string) {
+    return await UserFactory.search(body);
+  }
+
   static async authenticate(
     params: any,
     body: { email: string; password: string }

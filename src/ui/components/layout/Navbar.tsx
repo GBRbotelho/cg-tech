@@ -1,6 +1,6 @@
 import React from "react";
 import Home from "@/ui/components/icons/MenuNav/Home";
-import Clientes from "@/ui/components/icons/MenuNav/Clients";
+import Usuarios from "@/ui/components/icons/MenuNav/Clients";
 import ItemMenu from "./components/ItemMenu";
 import Engrenagens from "../icons/MenuNav/Engrenagens";
 import { useRouter } from "next/router";
@@ -10,8 +10,6 @@ import Image from "next/image";
 function Navbar() {
   const pathName = useRouter().pathname.split("/");
   const currentSegment = pathName[2];
-  console.log(currentSegment);
-  console.log(pathName);
 
   return (
     <nav className="fixed h-full w-[75px] flex flex-col justify-center text-white items-center bg-[#1B4391] z-50">
@@ -21,12 +19,15 @@ function Navbar() {
         </div>
         <ul className="m-0 p-0 list-none w-full flex flex-col items-center justify-center gap-[20px]">
           <ItemMenu
-            active={
-              currentSegment === undefined || currentSegment === "article"
-            }
+            active={currentSegment === undefined || currentSegment === ""}
           >
             <Link href={"/dashboard"}>
               <Home className="w-[40px]" />
+            </Link>
+          </ItemMenu>
+          <ItemMenu active={currentSegment === "users"}>
+            <Link href={"/dashboard/users"}>
+              <Usuarios className="w-[40px]" />
             </Link>
           </ItemMenu>
           {/* <ItemMenu active={currentSegment === "clients"}>

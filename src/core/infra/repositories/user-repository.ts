@@ -22,4 +22,12 @@ export class UserRepositoryDatabase {
 
     return UserAdapter.create(userProps);
   }
+
+  async search(input?: string) {
+    const query =
+      input !== "" ? { name: { $regex: input, $options: "i" } } : {};
+
+    const usersProps = await this.collection.find(query).toArray();
+    return usersProps;
+  }
 }

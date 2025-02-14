@@ -7,6 +7,8 @@ import { User } from "../../domain/entities/user";
 import { UserRepositoryDatabase } from "../repositories/user-repository";
 import { BcryptEncripter } from "../security/Bcrypt";
 import { TokenService } from "../security/Token";
+import user from "@/pages/api/user";
+import { SearchUser } from "@/core/application/usecases/user/user-search";
 
 export const UserFactory = {
   create: async (user: User.Props) => {
@@ -26,5 +28,10 @@ export const UserFactory = {
     );
 
     return await authenticate.execute(user);
+  },
+
+  search: async (input: string) => {
+    const search = new SearchUser(new UserRepositoryDatabase());
+    return await search.execute(input);
   },
 };
