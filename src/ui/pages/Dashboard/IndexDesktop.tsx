@@ -1,5 +1,7 @@
+import { ContentGateway } from "@/core/infra/gateways/ContentGateway";
 import Card from "@/ui/pages/Dashboard/components/Card";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Content } from "vaul";
 
 function IndexDesktop() {
   return (
@@ -13,16 +15,6 @@ function IndexDesktop() {
 
       <div className="flex px-4 mb-12">
         <div className="grid md:grid-cols-4 gap-4">
-          {/* <div className="gap-6">
-            <Card
-              title1="Curso"
-              text1="Primeiros passos na CGTECH"
-              title2="Categoria:"
-              text2="Onboarding"
-              classNameCard="relative left-2"
-              imageSrc="https://via.placeholder.com/300"
-            />
-          </div>
           <div className="gap-6">
             <Card
               title1="Curso"
@@ -52,7 +44,17 @@ function IndexDesktop() {
               classNameCard="relative left-2"
               imageSrc="https://via.placeholder.com/300"
             />
-          </div> */}
+          </div>
+          <div className="gap-6">
+            <Card
+              title1="Curso"
+              text1="Primeiros passos na CGTECH"
+              title2="Categoria:"
+              text2="Onboarding"
+              classNameCard="relative left-2"
+              imageSrc="https://via.placeholder.com/300"
+            />
+          </div>
         </div>
       </div>
     </main>
