@@ -7,6 +7,15 @@ button {
   cursor: pointer;
 }
 
+.image-zoom {
+  transition: transform 0.3s ease; /* Suaviza a animação */
+  object-fit: cover; /* Mantém a imagem coberta ao ampliar */
+}
+
+.image-zoom:hover {
+  transform: scale(1.1); /* Aumenta a imagem para 10% */
+}
+
 button:hover {
   transform: scale(1.05);
 }
