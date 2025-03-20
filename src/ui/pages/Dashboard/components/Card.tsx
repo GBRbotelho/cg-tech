@@ -4,8 +4,10 @@ import React from "react";
 import { ArrowRight } from "lucide-react";
 import sobre from "@/public/imgs/Sobre/backgroundsobre.webp";
 import Image from "next/image";
+import Link from "next/link";
 
 type CardProps = {
+  id?: string;
   classNameCard?: string;
   opacity?: string;
   title1: string;
@@ -53,12 +55,12 @@ function Card(props: CardProps) {
         </div>
         <div className="flex justify-end mt-4">
           <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center group-hover:bg-white">
-            <a
-              href="dashboard/article"
+            <Link
+              href={"/dashboard/courses/" + props.id}
               className="text-white group-hover:text-blue-700 w-15 cursor-pointer"
             >
               <ArrowRight />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

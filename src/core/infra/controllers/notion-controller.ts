@@ -1,6 +1,7 @@
 import { Course } from "@/core/domain/entities/course";
 import { NotionAdapter } from "@/core/application/adapters/NotionAdapter";
 import { NotionService } from "../services/NotionService";
+import { Lesson } from "@/core/domain/entities/lesson";
 export interface PageAttributes {
   banner: string;
   tag: string;
@@ -24,8 +25,39 @@ export class NotionController {
       thumbnail: NotionAdapter.file(result.properties.Thumbnail)[0],
       title: NotionAdapter.title(result.properties.Titulo),
       id: result.id,
+      description: NotionAdapter.richText(result.properties.Descricao),
       category: NotionAdapter.select(result.properties.Categoria),
     }));
+  }
+
+  static async getCourseId(params: any): Promise<Course | undefined> {
+    const result = await NotionService.requestId(params.id);
+    if (result) {
+      return {
+        thumbnail: NotionAdapter.file(result.properties.Thumbnail)[0],
+        title: NotionAdapter.title(result.properties.Titulo),
+        description: NotionAdapter.richText(result.properties.Descricao),
+        id: result.id,
+        category: NotionAdapter.select(result.properties.Categoria),
+      };
+    }
+  }
+
+  static async getLessonsByCourse(params: any): Promise<Lesson[]> {
+    const results = await NotionService.request(
+      "1bc3c610a46480e9b1abd3c9653524ba"
+    );
+
+    return results
+      .map((result: any) => ({
+        title: NotionAdapter.title(result.properties.Titulo),
+        id: result.id,
+        description: NotionAdapter.richText(result.properties.Descricao),
+        url: NotionAdapter.url(result.properties.Video),
+        text: NotionAdapter.richText(result.properties.Texto),
+        course: NotionAdapter.relation(result.properties.Curso),
+      }))
+      .filter((lesson: Lesson) => lesson.course === params.id);
   }
 
   //   static async getHosts(): Promise<Host.Props[]> {
@@ -98,44 +130,6 @@ export class NotionController {
   //           ],
   //         ) || "",
   //     }));
-  //   }
-
-  //   static async getDestinationId(
-  //     id: string,
-  //   ): Promise<Destination.Props | undefined> {
-  //     const request = await NotionService.requestId(id);
-
-  //     if (request) {
-  //       return {
-  //         idPage: request.id || "",
-  //         name: NotionAdapter.title(request.properties.Nome) || "",
-  //         subtitle: NotionAdapter.richText(request.properties.SubTitulo) || "",
-  //         description: NotionAdapter.richText(request.properties.Descricao) || "",
-  //         species: NotionAdapter.richText(request.properties.Especies) || "",
-  //         country: NotionAdapter.richText(request.properties.Pais) || "",
-  //         city: NotionAdapter.richText(request.properties.Cidade) || "",
-  //         flag: [
-  //           NotionAdapter.richText(request.properties.Flag).split(",")[0] || "",
-  //           NotionAdapter.richText(request.properties.Flag).split(",")[1] || "",
-  //           NotionAdapter.richText(request.properties.Flag).split(",")[2] || "",
-  //         ] || ["", "", ""],
-  //         internet: NotionAdapter.richText(request.properties.Internet) || "",
-  //         maxGroup: NotionAdapter.richText(request.properties.Maximo) || "",
-  //         idealFor: NotionAdapter.richText(request.properties.Ideal) || "",
-  //         type: NotionAdapter.richText(request.properties.Tipo) || "",
-  //         banner: NotionAdapter.file(request.properties.Banner) || [],
-  //         guesthouse: NotionAdapter.file(request.properties.Pousada)[0] || "",
-  //         photos: NotionAdapter.file(request.properties.Fotos) || [],
-  //         thumbnail:
-  //           NotionAdapter.file(request.properties["Thumbnail Video"]) || [],
-  //         video: NotionAdapter.url(request.properties.Video) || "",
-  //         information: NotionAdapter.relation(
-  //           request.properties[
-  //             "Related to Zyba - Informações gerais (Related to Zyba - Destination (Informações gerais))"
-  //           ],
-  //         ),
-  //       };
-  //     }
   //   }
 
   //   static async getHostId(id: string): Promise<Host.Props | undefined> {

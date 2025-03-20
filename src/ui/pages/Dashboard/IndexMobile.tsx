@@ -1,7 +1,13 @@
+import { Course } from "@/core/domain/entities/course";
 import Card from "@/ui/pages/Dashboard/components/Card";
 import React from "react";
 
-function IndexMobile() {
+type Props = {
+  courses: Course[];
+  setCourses: React.Dispatch<React.SetStateAction<[] | Course[]>>;
+};
+
+function IndexMobile(props: Props) {
   return (
     <main className="flex flex-col  w-screen lg:hidden ml-[75px] pt-[60px]">
       <div className="flex flex-col">
@@ -13,46 +19,25 @@ function IndexMobile() {
 
       <div className="flex px-4 mb-12 justify-center">
         <div className="grid sm:grid-cols-2 md:grid-cols-3 mx-auto gap-4">
-          {/* <div className="gap-6">
-            <Card
-              title1="Curso"
-              text1="Primeiros passos na CGTECH"
-              title2="Categoria:"
-              text2="Onboarding"
-              classNameCard="relative left-2"
-              imageSrc="https://via.placeholder.com/300" 
-            />
-          </div>
-          <div className="gap-6">
-            <Card
-              title1="Curso"
-              text1="Primeiros passos na CGTECH"
-              title2="Categoria:"
-              text2="Onboarding"
-              classNameCard="relative left-2"
-              imageSrc="https://via.placeholder.com/300" 
-            />
-          </div>
-          <div className="gap-6">
-            <Card
-              title1="Curso"
-              text1="Primeiros passos na CGTECH"
-              title2="Categoria:"
-              text2="Onboarding"
-              classNameCard="relative left-2"
-              imageSrc="https://via.placeholder.com/300"
-            />
-          </div>
-          <div className="gap-6">
-            <Card
-              title1="Curso"
-              text1="Primeiros passos na CGTECH"
-              title2="Categoria:"
-              text2="Onboarding"
-              classNameCard="relative left-2"
-              imageSrc="https://via.placeholder.com/300" 
-            />
-          </div> */}
+          {props.courses && props.courses.length > 0 ? (
+            props.courses.map((course, index) => (
+              <div className="gap-6" key={index}>
+                <Card
+                  id={course.id}
+                  title1="Curso"
+                  text1={course.title}
+                  title2="Categoria:"
+                  text2={course.category}
+                  classNameCard="relative left-2"
+                  imageSrc={course.thumbnail}
+                />
+              </div>
+            ))
+          ) : (
+            <div className="text-center text-lg text-gray-500">
+              Não há cursos disponíveis no momento.
+            </div>
+          )}
         </div>
       </div>
     </main>

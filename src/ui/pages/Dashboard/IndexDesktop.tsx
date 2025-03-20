@@ -20,10 +20,11 @@ function IndexDesktop(props: Props) {
 
       <div className="flex px-4 mb-12">
         <div className="grid md:grid-cols-4 gap-4">
-          {props.courses.length > 0 ? (
+          {props.courses && props.courses.length > 0 ? (
             props.courses.map((course, index) => (
               <div className="gap-6" key={index}>
                 <Card
+                  id={course.id}
                   title1="Curso"
                   text1={course.title}
                   title2="Categoria:"

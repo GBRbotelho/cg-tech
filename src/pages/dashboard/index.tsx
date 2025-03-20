@@ -21,7 +21,7 @@ const index: NextPage<{
   return (
     <>
       <IndexDesktop courses={courses} setCourses={setCourses} />
-      <IndexMobile />
+      <IndexMobile courses={courses} setCourses={setCourses} />
     </>
   );
 };
