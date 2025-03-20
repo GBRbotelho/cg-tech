@@ -14,7 +14,7 @@ export interface Informations {
 }
 
 // biome-ignore lint/complexity/noStaticOnlyClass: <explanation>
-export class ContentGateway {
+export class NotionController {
   static async getCourses(): Promise<Course[]> {
     const results = await NotionService.request(
       "1ac3c610a4648098bd18ff650521b7eb"
@@ -22,9 +22,9 @@ export class ContentGateway {
 
     return results.map((result: any) => ({
       thumbnail: NotionAdapter.file(result.properties.Thumbnail)[0],
-      title: NotionAdapter.richText(result.properties.Titulo),
+      title: NotionAdapter.title(result.properties.Titulo),
       id: result.id,
-      category: NotionAdapter.title(result.properties.Categoria),
+      category: NotionAdapter.select(result.properties.Categoria),
     }));
   }
 

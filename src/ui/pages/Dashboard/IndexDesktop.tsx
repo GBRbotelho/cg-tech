@@ -1,9 +1,14 @@
-import { ContentGateway } from "@/core/infra/gateways/ContentGateway";
+import { Course } from "@/core/domain/entities/course";
+import courses from "@/pages/api/courses";
 import Card from "@/ui/pages/Dashboard/components/Card";
 import React, { useEffect, useState } from "react";
-import { Content } from "vaul";
 
-function IndexDesktop() {
+type Props = {
+  courses: Course[];
+  setCourses: React.Dispatch<React.SetStateAction<[] | Course[]>>;
+};
+
+function IndexDesktop(props: Props) {
   return (
     <main className="hidden flex-col w-screen lg:flex ml-[75px] pt-[60px]">
       <div className="flex flex-col">
@@ -15,46 +20,24 @@ function IndexDesktop() {
 
       <div className="flex px-4 mb-12">
         <div className="grid md:grid-cols-4 gap-4">
-          <div className="gap-6">
-            <Card
-              title1="Curso"
-              text1="Primeiros passos na CGTECH"
-              title2="Categoria:"
-              text2="Onboarding"
-              classNameCard="relative left-2"
-              imageSrc="https://via.placeholder.com/300"
-            />
-          </div>
-          <div className="gap-6">
-            <Card
-              title1="Curso"
-              text1="Primeiros passos na CGTECH"
-              title2="Categoria:"
-              text2="Onboarding"
-              classNameCard="relative left-2"
-              imageSrc="https://via.placeholder.com/300"
-            />
-          </div>
-          <div className="gap-6">
-            <Card
-              title1="Curso"
-              text1="Primeiros passos na CGTECH"
-              title2="Categoria:"
-              text2="Onboarding"
-              classNameCard="relative left-2"
-              imageSrc="https://via.placeholder.com/300"
-            />
-          </div>
-          <div className="gap-6">
-            <Card
-              title1="Curso"
-              text1="Primeiros passos na CGTECH"
-              title2="Categoria:"
-              text2="Onboarding"
-              classNameCard="relative left-2"
-              imageSrc="https://via.placeholder.com/300"
-            />
-          </div>
+          {props.courses.length > 0 ? (
+            props.courses.map((course, index) => (
+              <div className="gap-6" key={index}>
+                <Card
+                  title1="Curso"
+                  text1={course.title}
+                  title2="Categoria:"
+                  text2={course.category}
+                  classNameCard="relative left-2"
+                  imageSrc={course.thumbnail}
+                />
+              </div>
+            ))
+          ) : (
+            <div className="text-center text-lg text-gray-500">
+              Não há cursos disponíveis no momento.
+            </div>
+          )}
         </div>
       </div>
     </main>

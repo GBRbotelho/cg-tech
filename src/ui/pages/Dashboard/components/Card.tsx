@@ -22,14 +22,16 @@ function Card(props: CardProps) {
         props.classNameCard || ""
       }`}
     >
-      <div className="min-w-[40px] max-w-[250px]">
+      <div className="min-w-[250px] max-w-[250px] min-h-[200px]">
         {props.imageSrc && (
-          <Image
-            src={sobre}
-            alt="Imagem do Card"
-            height={200}
-            className="w-full h-[200px] object-cover rounded-lg mb-4"
-          />
+          <div className="relative min-w-[250px] max-w-[250px] min-h-[200px] max-h-[200px]">
+            <Image
+              src={props.imageSrc}
+              alt="Imagem do Card"
+              fill={true}
+              className="rounded-lg mb-4"
+            />
+          </div>
         )}
         <div className="flex flex-col">
           <div>

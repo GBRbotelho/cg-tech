@@ -1,27 +1,26 @@
 import { Course } from "@/core/domain/entities/course";
-import { ContentGateway } from "@/core/infra/gateways/ContentGateway";
-import Navbar from "@/ui/components/layout/Navbar";
+import { NotionGateway } from "@/core/infra/gateways/notion-gateway";
 import IndexDesktop from "@/ui/pages/Dashboard/IndexDesktop";
 import IndexMobile from "@/ui/pages/Dashboard/IndexMobile";
 import { NextPage } from "next";
-import React from "react";
-
-export async function getServerSideProps() {
-  const courses = await ContentGateway.getCourses();
-  return {
-    props: {
-      courses,
-    },
-  };
-}
+import React, { useEffect, useState } from "react";
 
 const index: NextPage<{
   destinations: Course[];
-}> = (props) => {
-  console.log(props);
+}> = () => {
+  const [courses, setCourses] = useState<[] | Course[]>([]);
+  const getCourses = async () => {
+    const response = await NotionGateway.getCourses();
+    setCourses(response.data);
+  };
+
+  useEffect(() => {
+    getCourses();
+  }, []);
+
   return (
     <>
-      <IndexDesktop />
+      <IndexDesktop courses={courses} setCourses={setCourses} />
       <IndexMobile />
     </>
   );
