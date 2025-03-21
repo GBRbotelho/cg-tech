@@ -43,6 +43,20 @@ export class NotionController {
     }
   }
 
+  static async getLessonId(params: any): Promise<Lesson | undefined> {
+    const result = await NotionService.requestId(params.id);
+    if (result) {
+      return {
+        title: NotionAdapter.title(result.properties.Titulo),
+        id: result.id,
+        description: NotionAdapter.richText(result.properties.Descricao),
+        url: NotionAdapter.url(result.properties.Video),
+        text: NotionAdapter.richText(result.properties.Texto),
+        course: NotionAdapter.relation(result.properties.Curso),
+      };
+    }
+  }
+
   static async getLessonsByCourse(params: any): Promise<Lesson[]> {
     const results = await NotionService.request(
       "1bc3c610a46480e9b1abd3c9653524ba"

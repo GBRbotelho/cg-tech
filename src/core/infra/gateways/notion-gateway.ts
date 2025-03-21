@@ -20,6 +20,15 @@ export class NotionGateway {
     }
   }
 
+  static async getLessonId(id: string) {
+    try {
+      return await axios.get("/api/lessons/" + id);
+    } catch (err: any) {
+      const error = err?.response?.data;
+      return error;
+    }
+  }
+
   static async getCourseIdLessons(id: string) {
     try {
       return await axios.get("/api/courses/" + id + "/lessons");
