@@ -23,6 +23,7 @@ function LessonPage({ id, idCourse }: LessonProps) {
 
   const getLesson = async () => {
     const response: any = await NotionGateway.getLessonId(id);
+    console.log(response);
     setLesson(response.data);
   };
 
@@ -39,7 +40,7 @@ function LessonPage({ id, idCourse }: LessonProps) {
   return (
     <>
       <ClientsDesktop course={course} lesson={lesson} setLesson={setLesson} />
-      <ClientsMobile />
+      <ClientsMobile course={course} lesson={lesson} setLesson={setLesson} />
     </>
   );
 }
