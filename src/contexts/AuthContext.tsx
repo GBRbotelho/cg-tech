@@ -9,6 +9,7 @@ import {
   useEffect,
   useState,
 } from "react";
+import { useLoading } from "./LoadingContext";
 
 interface AuthContextProps {
   user: User | null;
@@ -32,6 +33,7 @@ export const AuthProvider: React.FC<ProviderProps> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
   const [token, setToken] = useState<string | null>(null);
   const { replace, pathname } = useRouter();
+  const loading = useLoading();
 
   const saveToken = async (token: string) => {
     sessionStorage.setItem("accessToken", token);
@@ -72,11 +74,19 @@ export const AuthProvider: React.FC<ProviderProps> = ({ children }) => {
     }
   }, []);
 
-  return (
-    <AuthContext.Provider value={{ user, token, saveToken, logout }}>
-      {children}
-    </AuthContext.Provider>
-  );
+  if (
+    (pathname.startsWith("/dashboard") && user?._id) ||
+    pathname.startsWith("/dashboard") === false
+  ) {
+    loading.offLoading();
+    return (
+      <AuthContext.Provider value={{ user, token, saveToken, logout }}>
+        {children}
+      </AuthContext.Provider>
+    );
+  } else {
+    loading.onLoading();
+  }
 };
 
 export const useAuth = () => useContext(AuthContext);
