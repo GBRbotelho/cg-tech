@@ -18,7 +18,7 @@ export default function Footer() {
         <ul className="flex flex-col text-[13px]">
           <Link
             href={
-              "https://drive.google.com/file/d/1i9YXX27LL0TEWkSne6_G0qpUhs6sW3rQ/view?usp=sharing"
+              "https://drive.google.com/file/d/1UmrFRxFSl_Ehx41Y4fcKBfC_LGXtRl2D/view"
             }
           >
             <li className="cursor-pointer">Jornal</li>
