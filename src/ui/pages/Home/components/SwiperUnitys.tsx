@@ -66,6 +66,33 @@ function SwiperUnitys(props: Props) {
             ></iframe>
           </CardUnity>
         </SwiperSlide>
+        <SwiperSlide>
+          <CardUnity text="Jundiaí">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.647386087951!2d-46.893229899999994!3d-23.1830663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf268602b22067%3A0x61666063f7191634!2sGolden%20Office!5e0!3m2!1spt-BR!2sbr!4v1752858149490!5m2!1spt-BR!2sbr"
+              className="w-full h-full"
+              loading="lazy"
+            ></iframe>
+          </CardUnity>
+        </SwiperSlide>
+        <SwiperSlide>
+          <CardUnity text="Alphaville">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.3189440216315!2d-46.86974981371948!3d-23.48501882432476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03b2bb400001%3A0xb691cfc0874b7ca0!2sAv.%20Andr%C3%B4meda%2C%20n%C2%BA%20885%20-%20Alphaville%2C%20Barueri%20-%20SP%2C%2006479-000!5e0!3m2!1spt-BR!2sbr!4v1752858294631!5m2!1spt-BR!2sbr"
+              className="w-full h-full"
+              loading="lazy"
+            ></iframe>
+          </CardUnity>
+        </SwiperSlide>
+        <SwiperSlide>
+          <CardUnity text="São Bernardo do Campo">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d1291.7273262327515!2d-46.55028156295642!3d-23.691809362952792!3m2!1i1024!2i768!4f13.1!2m1!1sRua%20Jos%C3%A9%20Versolato%2C%20n%C2%BA%20111%2C%20sala%201112%20Torre%20B%2C%20Centro!5e0!3m2!1spt-BR!2sbr!4v1752858429071!5m2!1spt-BR!2sbr"
+              className="w-full h-full"
+              loading="lazy"
+            ></iframe>
+          </CardUnity>
+        </SwiperSlide>
       </Swiper>
       <div className="absolute left-[102%]">
         <button onClick={() => swiperRef.current?.slideNext()}>
