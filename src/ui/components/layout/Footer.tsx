@@ -48,6 +48,7 @@ export default function Footer() {
           Central de atendimento: 0800 00 0005 | www.cgtech.com.br
         </h1>
       </div>
+<<<<<<< HEAD
       <div className="w-full bg-black flex-col gap-10 text-white flex justify-around items-center py-5 px-10 md:flex-row">
         <div className="h-[130px] w-[180px] relative">
           <Image src="/img/logo.webp" fill alt="Logo" />
@@ -89,6 +90,33 @@ export default function Footer() {
               </li>
             </Link>
             {/* <Link href={}></Link> */}
+=======
+      <div className="flex flex-col">
+        <h3 className="font-[700] text-[13px]">Links importantes:</h3>
+        <ul className="flex flex-col text-[13px]">
+          <Link
+            href={
+              "https://drive.google.com/file/d/1UmrFRxFSl_Ehx41Y4fcKBfC_LGXtRl2D/view"
+            }
+          >
+            <li className="cursor-pointer">Jornal</li>
+          </Link>
+          <Link href={"/sobre"}>
+            <li className="cursor-pointer">Sober nós</li>
+          </Link>
+          <Link href={"https://app.pipefy.com/public/form/nVewOHRz"}>
+            <li className="cursor-pointer">Acesso a gestão</li>
+          </Link>
+          <Link href={"https://app.pipefy.com/public/form/6C3h3rJb"}>
+            <li className="cursor-pointer">Acesso a funcionário</li>
+          </Link>
+        </ul>
+      </div>
+      <div>
+        <h3 className="font-[700] text-[11px]">Acesse nossas redes sociais:</h3>
+        <ul className="text-white text-[35px] flex">
+          <Link href={"https://www.instagram.com/grupocgtech/"}>
+>>>>>>> 525a5ef52deaea8f32b1fceb82718adf21de1d78
             <li className="cursor-pointer transition duration-200 hover:scale-105">
               <i className="ri-whatsapp-line"></i>
             </li>
