@@ -47,7 +47,7 @@ function SwiperJornal(props: Props) {
           <SwiperSlide>
             <Link
               href={
-                "https://drive.google.com/file/d/1i9YXX27LL0TEWkSne6_G0qpUhs6sW3rQ/view?usp=sharing"
+                "https://drive.google.com/file/d/1EMuofZYis5PstJygshNNWInRKGSr1J6z/view?usp=sharing"
               }
               target="_blank"
             >
@@ -86,6 +86,11 @@ function SwiperJornal(props: Props) {
               target="_blank"
             >
               <CardJornal src="/img/sectionHome/plano.jpeg" />
+            </Link>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Link href={"https://form.respondi.app/lQMARhS9"} target="_blank">
+              <CardJornal src="/img/sectionHome/assedio.jpeg" />
             </Link>
           </SwiperSlide>
         </Swiper>
