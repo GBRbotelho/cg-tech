@@ -45,7 +45,7 @@ export default function Footer() {
       </div>
       <div className="hidden lg:flex justify-center pb-5">
         <h1 className="text-[25px] 2xl:text-[49px] font-bold">
-          Central de atendimento: 0800 00 0005 | www.cgtech.com.br
+          Central de atendimento: 0800 000 0005 | www.cgtech.com.br
         </h1>
       </div>
       <footer className="w-full bg-black flex-col gap-10 text-white flex justify-around items-center py-5 px-10 md:flex-row">
