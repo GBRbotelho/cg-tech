@@ -13,7 +13,7 @@ function NavbarSite() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const linkJornal =
-    "https://drive.google.com/file/d/1UmrFRxFSl_Ehx41Y4fcKBfC_LGXtRl2D/view";
+    "https://drive.google.com/file/d/1EMuofZYis5PstJygshNNWInRKGSr1J6z/view?usp=sharing";
 
   const handleScroll = () => {
     const position = window.scrollY;
